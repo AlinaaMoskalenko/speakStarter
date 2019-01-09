@@ -3,11 +3,11 @@ $indent: 45px;
 .nav {
   display: none;
   padding: 25px 0 $indent $indent;
-  @include lg {
-    display: flex;
-  }
+  // @include lg {
+  //   display: flex;
+  // }
   @include md{
-    z-index: -1;
+    display: flex;
   }
   // @include xs{
   //   display: flex;

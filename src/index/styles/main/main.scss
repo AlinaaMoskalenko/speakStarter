@@ -3,20 +3,28 @@ $indent: 45px;
 .main {
   display: flex;
   margin: calc(#{$indent} - 12px) 0;
+  padding: 0 $indent;
   @include lg {
-    margin-top: 0;
+    justify-content: center;
   }
   @include md {
-    z-index: -1;
+    margin-top: 0;
   }
   &__tab-content {
     &:first-child {
       flex-basis: 62%;
       @include lg {
-        flex-basis: 100%;
+        flex-basis: 65%;
+      }
+      @include md {
+        flex-basis: 90%;
+      }
+      @include sm{
+        flex-basis: 100%
       }
     }
-    @include lg {
+
+    @include md {
       display: none;
       width: 100%;
       &_opened {
@@ -31,10 +39,9 @@ $indent: 45px;
     flex-grow: 1;
   }
   &__wrapper {
-    padding-right: 20px;
-    @include lg {
+    @include md {
       @include flex-justify-center;
-      padding-right: 0;
+      padding: 0;
     }
     @include sm {
       justify-content: space-around;
@@ -47,15 +54,14 @@ $indent: 45px;
   }
   &__previous-lesson {
     padding-right: 36px;
-    padding-left: $indent;
-    @include lg {
+    @include md {
       display: block;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0;
     }
   }
   &__next-lesson {
-    @include lg {
+    @include md {
       margin-right: 100px;
     }
     @include sm {

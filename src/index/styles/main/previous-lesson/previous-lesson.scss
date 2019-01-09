@@ -40,7 +40,7 @@ $border-pink: 1px solid $pink-state-color;
 
   &__filter {
     display: flex;
-    padding: 6px 0 12px 12px;
+    padding: 6px 0 12px 20px;
     // @include xs {
     //   padding: 0;
     //   display: none;
@@ -107,7 +107,7 @@ $border-pink: 1px solid $pink-state-color;
     // }
   }
   &__details {
-    padding-left: 17px;
+    padding: 0 17px;
     // @include xs {
     //   width: 100%;
     //   padding: 10px 0 0 0;

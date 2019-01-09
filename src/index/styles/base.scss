@@ -31,9 +31,12 @@ a {
 .wrapper {
   display: flex;
   margin-left: 25%;
+  @include lg {
+    margin-left: 0;
+  }
   &__content {
     flex-basis: 100%;
-    @include md {
+    @include lg {
       z-index: 0;
       &_hidden {
         z-index: -1;
@@ -41,9 +44,6 @@ a {
         opacity: 0.5;
       }
     }
-  }
-  @include md {
-    margin-left: 0;
   }
 }
 
@@ -58,7 +58,7 @@ a {
   @include lg {
     padding: 0 30px;
   }
-  @include md {
+  @include lg {
     display: block;
     background-color: transparent;
     border-right: none;
@@ -78,7 +78,7 @@ a {
       visibility: visible;
       width: 100%;
       .sidebar {
-        overflow: scroll;
+        overflow: auto;
         padding: 0 18px;
         &__items {
           transition: 0.2s;
