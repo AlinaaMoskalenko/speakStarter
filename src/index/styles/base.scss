@@ -56,9 +56,6 @@ a {
   @include flex-justify-end;
   padding: 0 18px;
   @include lg {
-    padding: 0 30px;
-  }
-  @include lg {
     display: block;
     background-color: transparent;
     border-right: none;
@@ -67,26 +64,22 @@ a {
     padding: 0;
     z-index: 1;
     position: absolute;
-    .sidebar {
-      &__items {
-        opacity: 0;
-      }
-    }
     &_opened {
+      left: 0;
       position: fixed;
-      transition: 1s;
+      transition: width 1s;
       visibility: visible;
       width: 100%;
       .sidebar {
         overflow: auto;
         padding: 0 18px;
         &__items {
-          transition: 0.2s;
-          transition-delay: 0.3s;
+          transition: 0.3s;
+          transition-delay: 0.2s;
           opacity: 1;
         }
         &__toggle {
-          right: 18px;
+          left: 216px;
           .toggle__row {
             background-color: $light-grey-color;
             &:first-child {

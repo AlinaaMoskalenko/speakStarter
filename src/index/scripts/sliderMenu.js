@@ -87,5 +87,10 @@ export function sliderMenu(targetContent, targetToggle) {
             toggleArrows[0].classList.remove('slider__arrow_active');
             toggleArrows[1].classList.add('slider__arrow_active');
         }
+
+        if (index == 1) {
+            toggleArrows[0].classList.add('slider__arrow_active');
+            toggleArrows[1].classList.add('slider__arrow_active');
+        }
     }
 }

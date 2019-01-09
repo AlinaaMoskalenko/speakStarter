@@ -40,9 +40,10 @@ for (let i = 0; i < lessonOption.length; i++) {
     });
 }
 
-const sidebarElement = document.querySelector('.wrapper-sidebar');
-window.addEventListener("orientationchange", function () {
-    if (sidebarElement.classList.contains('wrapper-sidebar_opened'))
-        sidebarElement.style.transition = 'none';
 
-});
+// const sidebarElement = document.querySelector('.wrapper-sidebar');
+// window.addEventListener("orientationchange", function () {
+//     if (sidebarElement.classList.contains('wrapper-sidebar_opened'))
+//         sidebarElement.style.transition = 'none';
+
+// });

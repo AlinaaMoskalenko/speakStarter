@@ -9155,10 +9155,12 @@ for (var i = 0; i < lessonOption.length; i++) {
     _loop(i);
 }
 
-var sidebarElement = document.querySelector('.wrapper-sidebar');
-window.addEventListener("orientationchange", function () {
-    if (sidebarElement.classList.contains('wrapper-sidebar_opened')) sidebarElement.style.transition = 'none';
-});
+// const sidebarElement = document.querySelector('.wrapper-sidebar');
+// window.addEventListener("orientationchange", function () {
+//     if (sidebarElement.classList.contains('wrapper-sidebar_opened'))
+//         sidebarElement.style.transition = 'none';
+
+// });
 
 /***/ }),
 /* 332 */
@@ -9275,6 +9277,11 @@ function sliderMenu(targetContent, targetToggle) {
 
         if (index === 0) {
             toggleArrows[0].classList.remove('slider__arrow_active');
+            toggleArrows[1].classList.add('slider__arrow_active');
+        }
+
+        if (index == 1) {
+            toggleArrows[0].classList.add('slider__arrow_active');
             toggleArrows[1].classList.add('slider__arrow_active');
         }
     }

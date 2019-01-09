@@ -10,6 +10,9 @@ $indent: 45px;
   @include md {
     margin-top: 0;
   }
+  @include sm{
+    padding: 0;
+  }
   &__tab-content {
     &:first-child {
       flex-basis: 62%;
@@ -20,6 +23,7 @@ $indent: 45px;
         flex-basis: 90%;
       }
       @include sm{
+        padding: 0 $indent;
         flex-basis: 100%
       }
     }
