@@ -8,7 +8,8 @@ $indent: 45px;
     justify-content: center;
   }
   @include md {
-    margin-top: 0;
+    margin-top: $indent;
+    flex-direction: column-reverse;
   }
   @include sm{
     padding: 0;
@@ -29,11 +30,7 @@ $indent: 45px;
     }
 
     @include md {
-      display: none;
       width: 100%;
-      &_opened {
-        display: block;
-      }
     }
   }
   &__title {

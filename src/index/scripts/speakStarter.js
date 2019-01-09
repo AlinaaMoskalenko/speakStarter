@@ -4,9 +4,9 @@ import { sliderMenu } from './sliderMenu';
 import { balanceMenu } from './balanceMenu';
 import { lessonMenu } from './lessonMenu';
 
-const tabBtn = document.querySelector('.nav');
-const tabContents = document.querySelector('.main');
-lessonMenu(tabBtn, tabContents);
+// const tabBtn = document.querySelector('.nav');
+// const tabContents = document.querySelector('.main');
+// lessonMenu(tabBtn, tabContents);
 
 const notificationBtn = document.querySelector('.header__notification');
 notificationMenu(notificationBtn);
@@ -41,9 +41,9 @@ for (let i = 0; i < lessonOption.length; i++) {
 }
 
 
-// const sidebarElement = document.querySelector('.wrapper-sidebar');
-// window.addEventListener("orientationchange", function () {
-//     if (sidebarElement.classList.contains('wrapper-sidebar_opened'))
-//         sidebarElement.style.transition = 'none';
+const sidebarElement = document.querySelector('.wrapper-sidebar');
+window.addEventListener("orientationchange", function () {
+    if (sidebarElement.classList.contains('wrapper-sidebar_opened'))
+        sidebarElement.style.transition = 'none';
 
-// });
+});
