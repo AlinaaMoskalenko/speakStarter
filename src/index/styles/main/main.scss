@@ -40,10 +40,10 @@ $indent: 45px;
       justify-content: space-around;
       padding: 0 15px;
     }
-    @include xs {
-      flex-direction: column;
-      align-items: center;
-    }
+    // @include xs {
+    //   flex-direction: column;
+    //   align-items: center;
+    // }
   }
   &__previous-lesson {
     padding-right: 36px;

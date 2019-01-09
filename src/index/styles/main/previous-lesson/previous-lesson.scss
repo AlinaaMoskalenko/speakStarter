@@ -13,51 +13,51 @@ $border-pink: 1px solid $pink-state-color;
 .previous-lesson {
   &__header {
     @include flex-center-center-wrap;
-    @include xs {
-      flex-direction: column;
-    }
+    // @include xs {
+    //   flex-direction: column;
+    // }
   }
-  @include xs {
-    &__dropdown-menu {
-      position: relative;
-      display: inline-block;
-      padding: 6px 0 12px 0;
-      align-self: flex-end;
-      &:hover {
-        .previous-lesson__filter {
-          display: block;
-          width: 100%;
-          border-bottom-left-radius: $border-radius;
-          border-bottom-right-radius: $border-radius;
-        }
-        .dropdown-btn {
-          color: $green-color;
-          background-color: $light-green-bg-color;
-        }
-      }
-    }
-  }
+  // @include xs {
+  //   &__dropdown-menu {
+  //     position: relative;
+  //     display: inline-block;
+  //     padding: 6px 0 12px 0;
+  //     align-self: flex-end;
+  //     &:hover {
+  //       .previous-lesson__filter {
+  //         display: block;
+  //         width: 100%;
+  //         border-bottom-left-radius: $border-radius;
+  //         border-bottom-right-radius: $border-radius;
+  //       }
+  //       .dropdown-btn {
+  //         color: $green-color;
+  //         background-color: $light-green-bg-color;
+  //       }
+  //     }
+  //   }
+  // }
 
   &__filter {
     display: flex;
     padding: 6px 0 12px 12px;
-    @include xs {
-      padding: 0;
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      .filter-btn {
-        color: black;
-        text-decoration: none;
-        display: block;
-        &:hover {
-          background-color: #f1f1f1;
-        }
-      }
-    }
+    // @include xs {
+    //   padding: 0;
+    //   display: none;
+    //   position: absolute;
+    //   background-color: #f9f9f9;
+    //   min-width: 160px;
+    //   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    //   z-index: 1;
+    //   .filter-btn {
+    //     color: black;
+    //     text-decoration: none;
+    //     display: block;
+    //     &:hover {
+    //       background-color: #f1f1f1;
+    //     }
+    //   }
+    // }
   }
   &__content {
     @include flex-column-between;
@@ -83,10 +83,10 @@ $border-pink: 1px solid $pink-state-color;
         margin-bottom: 45px;
       }
     }
-    @include xs {
-      padding: 10px 25px;
-      min-height: 280px;
-    }
+    // @include xs {
+    //   padding: 10px 25px;
+    //   min-height: 280px;
+    // }
   }
   &__number {
     width: 61px;
@@ -102,26 +102,26 @@ $border-pink: 1px solid $pink-state-color;
       content: "урок";
       font-size: $font-size;
     }
-    @include xs {
-      align-self: flex-end;
-    }
+    // @include xs {
+    //   align-self: flex-end;
+    // }
   }
   &__details {
     padding-left: 17px;
-    @include xs {
-      width: 100%;
-      padding: 10px 0 0 0;
-      max-width: 400px;
-    }
+    // @include xs {
+    //   width: 100%;
+    //   padding: 10px 0 0 0;
+    //   max-width: 400px;
+    // }
   }
   &__title {
     font-size: $font-size-3;
     margin: 7px 0 8px 0;
     min-width: 248px;
-    @include xs {
-      width: 100%;
-      min-width: 0;
-    }
+    // @include xs {
+    //   width: 100%;
+    //   min-width: 0;
+    // }
   }
   &__subtitle {
     color: #999999;
@@ -134,11 +134,11 @@ $border-pink: 1px solid $pink-state-color;
     @include sm {
       align-self: flex-end;
     }
-    @include xs {
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
+    // @include xs {
+    //   flex-direction: column;
+    //   align-items: center;
+    //   width: 100%;
+    // }
   }
   &__state {
     @include flex-align-center;
@@ -179,53 +179,53 @@ $border-pink: 1px solid $pink-state-color;
     transform: scale(1.05);
     &:first-child {
       border-right: $border-blue;
-      @include xs {
-        transform: none;
-        border: none;
-      }
+      // @include xs {
+      //   transform: none;
+      //   border: none;
+      // }
     }
     &:nth-child(2) {
       border-right: $border-green;
-      @include xs {
-        transform: none;
-        border: none;
-      }
+      // @include xs {
+      //   transform: none;
+      //   border: none;
+      // }
     }
-    @include xs {
-      transform: none;
-      border: none;
-    }
+    // @include xs {
+    //   transform: none;
+    //   border: none;
+    // }
   }
   &_active {
     transform: scale(1.05);
     &:first-child {
       border-right: $border-blue;
-      @include xs {
-        transform: none;
-        border: none;
-      }
+      // @include xs {
+      //   transform: none;
+      //   border: none;
+      // }
     }
     &:nth-child(2) {
       border-right: $border-green;
-      @include xs {
-        transform: none;
-        border: none;
-      }
+      // @include xs {
+      //   transform: none;
+      //   border: none;
+      // }
     }
   }
-  @include xs {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-  }
+  // @include xs {
+  //   border: none;
+  //   background-color: transparent;
+  //   width: 100%;
+  // }
 }
 
 .card__description {
   @include flex-align-center;
-  @include xs {
-    width: 100%;
-    flex-direction: column;
-  }
+  // @include xs {
+  //   width: 100%;
+  //   flex-direction: column;
+  // }
 }
 
 .action {
@@ -244,10 +244,10 @@ $border-pink: 1px solid $pink-state-color;
       &:hover {
         background-color: $light-green-bg-color;
       }
-      @include xs {
-        width: 100%;
-        margin-right: 0;
-      }
+      // @include xs {
+      //   width: 100%;
+      //   margin-right: 0;
+      // }
     }
     &:last-child {
       width: 109px;
@@ -256,14 +256,14 @@ $border-pink: 1px solid $pink-state-color;
       &:hover {
         background-color: #f0baa865;
       }
-      @include xs {
-        width: 100%;
-      }
+      // @include xs {
+      //   width: 100%;
+      // }
     }
-    @include xs {
-      max-width: 350px;
-      margin: 0 0 10px 0;
-    }
+    // @include xs {
+    //   max-width: 350px;
+    //   margin: 0 0 10px 0;
+    // }
   }
 }
 
@@ -292,8 +292,8 @@ $border-pink: 1px solid $pink-state-color;
   }
   &__arrow {
     position: absolute;
-    top: 47%;
-    left: 50%;
+    top: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
@@ -321,17 +321,17 @@ $border-pink: 1px solid $pink-state-color;
 
 .dropdown-btn {
   display: none;
-  @include xs {
-    display: inline-block;
-    height: 50px;
-    border: 1px solid #e8e8e8;
-    border-radius: 5px;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 0 10px;
-    outline: none;
-    align-self: flex-end;
-  }
+  // @include xs {
+  //   display: inline-block;
+  //   height: 50px;
+  //   border: 1px solid #e8e8e8;
+  //   border-radius: 5px;
+  //   background-color: transparent;
+  //   cursor: pointer;
+  //   padding: 0 10px;
+  //   outline: none;
+  //   align-self: flex-end;
+  // }
 }
 
 .loading-circle {

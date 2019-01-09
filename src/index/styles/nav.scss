@@ -9,11 +9,11 @@ $indent: 45px;
   @include md{
     z-index: -1;
   }
-  @include xs{
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-  }
+  // @include xs{
+  //   display: flex;
+  //   justify-content: center;
+  //   padding: 10px 0;
+  // }
   &__tab {
     position: relative;
     border: none;
@@ -40,9 +40,9 @@ $indent: 45px;
         transition: 0.3s;
       }
     }
-    @include xs{
-      font-size: 12px;
-      padding: 10px;
-    }
+    // @include xs{
+    //   font-size: 12px;
+    //   padding: 10px;
+    // }
   }
 }
