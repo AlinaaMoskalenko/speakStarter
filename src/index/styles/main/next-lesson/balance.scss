@@ -11,6 +11,10 @@ $z-index-2: 2;
     box-shadow: $box-shadow;
     @include flex-column-around-center;
     margin-top: $indent-1;
+    //new
+    @include xs {
+      max-width: 80%;
+    }
   }
   &__tab {
     @include flex-justify-center;
@@ -95,6 +99,3 @@ $z-index-2: 2;
     }
   }
 }
-
-
-

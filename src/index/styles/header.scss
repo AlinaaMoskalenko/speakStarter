@@ -46,14 +46,16 @@ $border: 1px solid $light-grey-color;
       min-width: 42px;
       margin-left:0;
     }
-    // @include xs {
-    //   margin: 0;
-    // }
+    /////
+    @include xs {
+      margin: 0;
+    }
   }
   &__name {
-    // @include xs {
-    //   display: none;
-    // }
+    /////
+    @include xs {
+      display: none;
+    }
   }
 }
 
@@ -94,9 +96,10 @@ $border: 1px solid $light-grey-color;
       @include sm {
         right: 19px;
       }
-      // @include xs {
-      //   right: 82px;
-      // }
+      ////
+      @include xs {
+        right: 82px;
+      }
     }
     &_opened {
       display: block;
@@ -105,10 +108,11 @@ $border: 1px solid $light-grey-color;
       width: 300px;
       transform: translateX(-38%);
     }
-    // @include xs {
-    //   width: 250px;
-    //   transform: translateX(-10%);
-    // }
+    /////
+    @include xs {
+      width: 250px;
+      transform: translateX(-10%);
+    }
   }
   &__caption {
     padding: 16px 30px;
@@ -116,10 +120,11 @@ $border: 1px solid $light-grey-color;
     @include sm {
       padding-bottom: 10px;
     }
-    // @include xs {
-    //   padding-left: 20px;
-    //   padding-right: 20px;
-    // }
+    ////
+    @include xs {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &__details {
     padding: 0 30px;
@@ -131,9 +136,10 @@ $border: 1px solid $light-grey-color;
     &:hover {
       background-color: #f7f7f7;
     }
-    // @include xs {
-    //   padding: 0 20px;
-    // }
+    ////
+    @include xs {
+      padding: 0 20px;
+    }
   }
   &__title {
     display: flex;
