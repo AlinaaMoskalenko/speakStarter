@@ -280,10 +280,15 @@ $border-pink: 1px solid $pink-state-color;
       margin-right: 10px;
       &:hover {
         background-color: $light-green-bg-color;
+        @include xs{
+          background-color: transparent;
+        }
       }
       ///new
       @include xs {
-        width: 50px;
+        margin-right: 25px;
+        padding: 0;
+        width: 35px;
       }
     }
     &:last-child {
@@ -292,15 +297,18 @@ $border-pink: 1px solid $pink-state-color;
       color: $orange-red-color;
       &:hover {
         background-color: #f0baa865;
+        @include xs{
+          background-color: transparent;
+        }
       }
       ////new
       @include xs {
-        width: 50px;
+        padding: 0;
+        width: 35px;
       }
     }
     ////new
     @include xs {
-      margin: 0;
       border: none;
       background: transparent;
       & > i {
