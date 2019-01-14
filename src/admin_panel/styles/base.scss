@@ -4,7 +4,7 @@
 
 html,
 button {
-  font-family: "MuseoSansCyrl500", Helvetica, sans-serif;
+  font-family: $font-family;
   font-size: $font-size;
   color: $main-color-text;
   background-color: $bg-main;

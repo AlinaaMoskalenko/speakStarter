@@ -1,0 +1,92 @@
+.filter {
+  &__select-student,
+  &__select-date {
+    width: 190px;
+    position: relative;
+  }
+  &__select-student {
+    margin-right: 7px;
+  }
+}
+
+.selected-item,
+.selected-date {
+  border: 1px solid $blue-color;
+  border-radius: $border-radius;
+  position: relative;
+  color: $grey-text-color;
+  cursor: pointer;
+}
+
+.selected-item {
+  padding: 12px 30px 12px 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $blue-color;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+  }
+}
+
+.select-arrow-active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  &:after {
+    top: 16px;
+    transform: rotate(-135deg);
+  }
+}
+
+.selected-date {
+  @include flex-center-between;
+  padding: 0 12px;
+  &__date {
+    flex-basis: 85%;
+    padding: 12px 0;
+  }
+  &__calendar {
+    flex-basis: 15%;
+    position: relative;
+    .calendar {
+      width: 25px;
+      height: 26px;
+    }
+    .date {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.79rem;
+    }
+  }
+}
+
+.items {
+  border: 1px solid $blue-color;
+  border-top: none;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  & div {
+    padding: 5px 12px;
+    color: $grey-text-color;
+    &:hover {
+      color: #ffffff;
+      background-color: $blue-color;
+    }
+  }
+  &_hidden {
+    display: none;
+  }
+}

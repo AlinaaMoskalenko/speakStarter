@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin panel</title>
+<link href="admin_panel.css" rel="stylesheet"></head>
+
+<body>
+    <div class="wrapper-sidebar">
+        <aside class="sidebar">
+            <div class="sidebar__toggle">
+                <div class="toggle__row"></div>
+                <div class="toggle__row"></div>
+                <div class="toggle__row"></div>
+            </div>
+            <div class="sidebar__items">
+                <img src="./assets/images/logo.png" alt="Logo SpeakStarter" class="sidebar__logo">
+                <div class="sidebar__links">
+                    <ul class="link">
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.34 15.68" class="item__icon">
+                                    <g class="item__icon-1">
+                                        <path d="M14.59,5.79v7.45a1.7,1.7,0,0,1-1.7,1.69H2.45a1.7,1.7,0,0,1-1.7-1.7V5.79" />
+                                        <polyline points="0.75 5.79 7.67 0.75 14.59 5.79" />
+                                        <rect x="5.27" y="7" width="4.93" height="7.93" />
+                                    </g>
+                                </svg>
+                                <span class="item__text">Главная</span>
+                            </a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.05 14.06" class="item__icon item__icon-hometasks">
+                                    <g>
+                                        <path class="item__icon-1" d="M9.58,13.31v-11S4.68.1,2.61.94V11.77S4.93,11.24,9.58,13.31Z" />
+                                        <path class="item__icon-1" d="M9.58,13.31v-11S14.49.1,16.56.94V11.77S14.24,11.24,9.58,13.31Z" />
+                                        <polyline class="item__icon-2" points="18.55 1.77 18.55 13.31 9.59 13.31 0.5 13.31 0.5 1.77" />
+                                    </g>
+                                </svg>
+                                <span class="item__text">Домашнее задание</span>
+                            </a>
+                            <div class="item__notification">3</div>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.76 14.29" class="item__icon">
+                                    <g class="item__icon-1">
+                                        <rect x="0.75" y="0.75" width="15.26" height="12.79" />
+                                        <polyline points="0.94 11.14 5.62 6.33 11.4 13.54" />
+                                        <polyline points="8.62 9.75 11.93 6.8 15.95 10.9" />
+                                    </g>
+                                </svg>
+                                <span class="item__text">Медиа</span>
+                            </a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.52 16.35" class="item__icon">
+                                    <g class="item__icon-1">
+                                        <rect x="0.75" y="0.75" width="12.02" height="14.85" rx="1.17" ry="1.17" />
+                                        <line x1="3.69" y1="5.19" x2="9.83" y2="5.19" />
+                                        <line x1="3.69" y1="8.61" x2="9.83" y2="8.61" />
+                                        <line x1="4.06" y1="11.77" x2="6.76" y2="11.77" />
+                                    </g>
+                                </svg>
+                                <span class="item__text">Упражнения</span>
+                            </a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.57 15.57" class="item__icon item__icon-payments">
+                                    <g>
+                                        <rect class="item__icon-1" x="0.75" y="3.45" width="14.07" height="11.37" rx="1.9"
+                                            ry="1.9" />
+                                        <path class="item__icon-1" d="M1.89,3.58,12.24.77a.67.67,0,0,1,.84.65v.84" />
+                                        <circle class="item__icon-2" cx="12.03" cy="9.14" r="0.66" />
+                                    </g>
+                                </svg>
+                                <span class="item__text">Оплата</span>
+                            </a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.47 16.52" class="item__icon">
+                                    <g class="item__icon-1">
+                                        <path d="M15.72,8.26V6.94a.4.4,0,0,0-.4-.4H14l-.72-1.15,1-.92a.4.4,0,0,0,0-.57L12.59,2.1a.39.39,0,0,0-.57,0L11,3,9.8,2.51V1.15a.4.4,0,0,0-.4-.4H6.94a.4.4,0,0,0-.4.4V2.51L5.26,3l-1-.92a.39.39,0,0,0-.57,0L2,3.9a.41.41,0,0,0,0,.57l1,.92L2.51,6.54H1.15a.4.4,0,0,0-.4.4V8.26" />
+                                        <path d="M.75,8.26V9.58a.4.4,0,0,0,.4.4H2.51l.72,1.15-1,.92a.4.4,0,0,0,0,.57l1.67,1.81a.41.41,0,0,0,.57,0l1-.92L6.67,14v1.35a.4.4,0,0,0,.4.4H9.53a.4.4,0,0,0,.4-.4V14l1.28-.49,1,.92a.41.41,0,0,0,.57,0l1.67-1.81a.41.41,0,0,0,0-.57l-1-.92L14,10h1.36a.4.4,0,0,0,.4-.4V8.26" />
+                                        <circle cx="8.23" cy="8.26" r="3.08" />
+                                    </g>
+                                </svg>
+                                <span class="item__text">Настройки</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="wrapper">
+        <div class="wrapper__content">
+            <header class="header">
+                <div class="header__user">
+                    <div class="user__photo">
+                        <img src="./assets/images/user.png" alt="User photo" class="photo">
+                    </div>
+                    <div class="user__name">Nataliya Sergeevna</div>
+                </div>
+                <div class="header__notification">
+                    <div class="header__notification-icon">
+                        <img src="./assets/images/bell.svg" alt="Notification bell" class="notification__bell">
+                        <div class="notification__indicator"></div>
+                    </div>
+                    <div class="notification__conteiner">
+                        <div class="notification__caption">Уведомления</div>
+                        <div class="notification">
+                            <div class="notification__details">
+                                <div class="notification__title">
+                                    <div class="notification__state notification__state_new-homework"></div>
+                                    <div class="notification__text">Вам было задано д/з</div>
+                                </div>
+                                <div class="notification__subtitle">25 мин.</div>
+                            </div>
+                            <div class="notification__details">
+                                <div class="notification__title">
+                                    <div class="notification__state notification__state_no-homework"></div>
+                                    <div class="notification__text">Урок перешел в стадию "д/з не задали"</div>
+                                </div>
+                                <div class="notification__subtitle">5 мин.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main">
+                <div class="main__transaction">
+                    <div class="transaction__title-block">
+                        <div class="main__title">Транзакции</div>
+                        <div class="transaction__filter">
+                            <div class="filter__select-student">
+                                <div class="selected-item">
+                                    Ученик
+                                </div>
+                                <div class="items items_hidden">
+                                    <div>Юрий</div>
+                                    <div>Андрей</div>
+                                    <div>Сергей</div>
+                                    <div>Павел</div>
+                                </div>
+                            </div>
+                            <div class="filter__select-date">
+                                <div class="selected-date">
+                                    <div class="selected-date__date">
+                                        Дата создания
+                                    </div>
+                                    <div class="selected-date__calendar">
+                                        <img src="./assets/images/calendar.svg" alt="Filter calendar"
+                                            class="calendar">
+                                        <div class="date">29</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transaction__table-block">
+                        <div class="table__header row">
+                            <div class="table__column col-1">#</div>
+                            <div class="table__column col-5">Ученик</div>
+                            <div class="table__column col-4">Детали</div>
+                            <div class="table__column col-6">Комментарий</div>
+                            <div class="table__column col-5">Время создания</div>
+                        </div>
+                        <div class="table__rows">
+                            <div class="table__item row">
+                                <div class="table__column col-1">1</div>
+                                <div class="table__column col-5">
+                                    <div class="title">Юрий Бура</div>
+                                    <div class="subtitle">добавил Егор Чулков</div>
+                                </div>
+                                <div class="table__column col-4">
+                                    <div class="title">EUR 100</div>
+                                    <div class="subtitle">10 уроков</div>
+                                </div>
+                                <div class="table__column col-6">
+                                    <div class="text">Тестовая транзакция</div>
+                                </div>
+                                <div class="table__column col-5">
+                                    <div class="title">06-12-2018</div>
+                                    <div class="subtitle">10:51:22</div>
+                                </div>
+                            </div>
+                            <div class="table__item row">
+                                <div class="table__column col-1">2</div>
+                                <div class="table__column col-5">
+                                    <div class="title">Юрий Бура</div>
+                                    <div class="subtitle">добавил Егор Чулков</div>
+                                </div>
+                                <div class="table__column col-4">
+                                    <div class="title">EUR 100</div>
+                                    <div class="subtitle">10 уроков</div>
+                                </div>
+                                <div class="table__column col-6">
+                                    <div class="text">Тестовая транзакция</div>
+                                </div>
+                                <div class="table__column col-5">
+                                    <div class="title">06-12-2018</div>
+                                    <div class="subtitle">10:51:22</div>
+                                </div>
+                            </div>
+                            <div class="table__item row">
+                                <div class="table__column col-1">3</div>
+                                <div class="table__column col-5">
+                                    <div class="title">Юрий Бура</div>
+                                    <div class="subtitle">добавил Егор Чулков</div>
+                                </div>
+                                <div class="table__column col-4">
+                                    <div class="title">EUR 100</div>
+                                    <div class="subtitle">10 уроков</div>
+                                </div>
+                                <div class="table__column col-6">
+                                    <div class="text">Тестовая транзакция</div>
+                                </div>
+                                <div class="table__column col-5">
+                                    <div class="title">06-12-2018</div>
+                                    <div class="subtitle">10:51:22</div>
+                                </div>
+                            </div>
+                            <div class="table__item row">
+                                <div class="table__column col-1">4</div>
+                                <div class="table__column col-5">
+                                    <div class="title">Юрий Бура</div>
+                                    <div class="subtitle">добавил Егор Чулков</div>
+                                </div>
+                                <div class="table__column col-4">
+                                    <div class="title">EUR 100</div>
+                                    <div class="subtitle">10 уроков</div>
+                                </div>
+                                <div class="table__column col-6">
+                                    <div class="text">Тестовая транзакция</div>
+                                </div>
+                                <div class="table__column col-5">
+                                    <div class="title">06-12-2018</div>
+                                    <div class="subtitle">10:51:22</div>
+                                </div>
+                            </div>
+                            <div class="table__item row">
+                                <div class="table__column col-1">5</div>
+                                <div class="table__column col-5">
+                                    <div class="title">Юрий Бура</div>
+                                    <div class="subtitle">добавил Егор Чулков</div>
+                                </div>
+                                <div class="table__column col-4">
+                                    <div class="title">EUR 100</div>
+                                    <div class="subtitle">10 уроков</div>
+                                </div>
+                                <div class="table__column col-6">
+                                    <div class="text">Тестовая транзакция</div>
+                                </div>
+                                <div class="table__column col-5">
+                                    <div class="title">06-12-2018</div>
+                                    <div class="subtitle">10:51:22</div>
+                                </div>
+                            </div>
+                            <div class="table__item row">
+                                <div class="table__column col-1">6</div>
+                                <div class="table__column col-5">
+                                    <div class="title">Юрий Бура</div>
+                                    <div class="subtitle">добавил Егор Чулков</div>
+                                </div>
+                                <div class="table__column col-4">
+                                    <div class="title">EUR 100</div>
+                                    <div class="subtitle">10 уроков</div>
+                                </div>
+                                <div class="table__column col-6">
+                                    <div class="text">Тестовая транзакция</div>
+                                </div>
+                                <div class="table__column col-5">
+                                    <div class="title">06-12-2018</div>
+                                    <div class="subtitle">10:51:22</div>
+                                </div>
+                            </div>
+                            <div class="table__item row add-new-row">
+                                <div class="table__column col-1">7</div>
+                                <div class="table__column col-5">
+                                    <div class="title">Юрий Бура</div>
+                                    <div class="subtitle">добавил Егор Чулков</div>
+                                </div>
+                                <div class="table__column col-4">
+                                    <div class="title">EUR 100</div>
+                                    <div class="subtitle">10 уроков</div>
+                                </div>
+                                <div class="table__column col-6">
+                                    <div class="text">Тестовая транзакция</div>
+                                </div>
+                                <div class="table__column col-5">
+                                    <div class="title">06-12-2018</div>
+                                    <div class="subtitle">10:51:22</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transaction__pagination-block">
+                        <div class="page-toggle-arrow left"></div>
+                        <div class="page-number page-number_active">1</div>
+                        <div class="page-number">2</div>
+                        <div class="page-number">3</div>
+                        <div class="page-number">. . .</div>
+                        <div class="page-number">10</div>
+                        <div class="page-toggle-arrow page-toggle-arrow_active right"></div>
+                    </div>
+                </div>
+                <div class="main__new-transaction">
+                    <div class="new-transaction__title-block">
+                        <div class="main__title">Зарегистрировать транзакцию</div>
+
+                    </div>
+                    <form class="new-transaction__form">
+                        <div class="new-transaction__select-user">
+                            <div class="selected-item">Кем выполнена транзакция</div>
+                            <div class="items items_hidden">
+                                <div>Юрий</div>
+                                <div>Андрей</div>
+                                <div>Сергей</div>
+                                <div>Павел</div>
+                            </div>
+                        </div>
+                        <input type="text" class="new-transaction__amount-cash" placeholder ="Сумма">
+                        <div class="new-transaction__select-currency">
+                                <div class="selected-item">EUR</div>
+                                <div class="items items_hidden">
+                                    <div>CHF</div>
+                                    <div>USD</div>
+                                    <div>UAH</div>
+                                    <div>RUR</div>
+                                </div>
+                            </div>
+                        <input type="text" class="new-transaction__amount-lessons" placeholder="Количество уроков">
+                        <textarea class="new-transaction__comment" placeholder="Комментарий"></textarea>
+                        <button class="new-transaction__add" type="submit">Зарегистрировать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="admin_panel.js"></script></body>
+
+</html>

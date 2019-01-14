@@ -1,0 +1,13 @@
+$indent: 45px;
+
+.main {
+  display: flex;
+  padding: $indent;
+  &__title {
+    font-size: 1.79rem;
+  }
+  &__transaction {
+    flex-basis: 62%;
+    padding-right: 36px;
+  }
+}

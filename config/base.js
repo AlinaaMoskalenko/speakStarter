@@ -16,6 +16,7 @@ const baseConf = (_path) => {
         'pop-up-reschedule': ['./src/pop-up-reschedule/pop-up-reschedule.js'],
         'pop-up-reschedule-main': ['./src/pop-up-reschedule-main/pop-up-reschedule-main.js'],
         'pop-up-appoint': ['./src/pop-up-appoint/pop-up-appoint.js'],
+        admin_panel: ['./src/admin_panel/admin_panel.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
