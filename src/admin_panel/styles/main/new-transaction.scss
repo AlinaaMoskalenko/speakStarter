@@ -1,5 +1,6 @@
 .new-transaction {
   &__title-block {
+    @include flex-align-center;
     margin-bottom: 12px;
     height: 43px;
   }

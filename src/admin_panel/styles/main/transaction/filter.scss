@@ -11,6 +11,7 @@
 
 .selected-item,
 .selected-date {
+  white-space: nowrap;
   border: 1px solid $blue-color;
   border-radius: $border-radius;
   position: relative;

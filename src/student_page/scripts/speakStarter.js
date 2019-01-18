@@ -1,17 +1,14 @@
 import { notificationMenu } from './notificationMenu';
-import { sliderMenu } from './sliderMenu';
-import { balanceMenu } from './balanceMenu';
+import { filterMenu } from './filterMenu';
 
 const notificationBtn = document.querySelector('.header__notification');
 notificationMenu(notificationBtn);
 
-const sliderContent = document.querySelector('.next-lesson__conteiner');
-const sliderBtn = document.querySelector('.next-lesson__slider');
-sliderMenu(sliderContent, sliderBtn);
+const fitlerAllScreen = document.querySelector('.previous-lesson__filter');
+const fitlerXsScreen = document.querySelector('.previous-lesson__filter_xs');
+filterMenu(fitlerAllScreen);
+filterMenu(fitlerXsScreen);
 
-const balanceTabs = document.querySelector('.balance__tab');
-const balanceContents = document.querySelector('.balance__conteiner');
-balanceMenu(balanceTabs, balanceContents);
 
 //sidebar open
 const sidebarToggle = document.querySelector('.sidebar__toggle');
@@ -41,3 +38,19 @@ window.addEventListener("orientationchange", function () {
         sidebarElement.style.transition = 'none';
 
 });
+
+
+//new
+var progressValue = document.querySelector('.progress-bar__value');
+
+var RADIUS = 60;
+var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+function progress(value) {
+    var progress = value / 100;
+    var dashoffset = CIRCUMFERENCE * (1 - progress);
+    console.log('progress:', value + '%');
+    progressValue.style.strokeDashoffset = dashoffset;
+}
+progressValue.style.strokeDasharray = CIRCUMFERENCE;
+progress(60);
