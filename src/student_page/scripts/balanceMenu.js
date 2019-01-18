@@ -1,14 +1,17 @@
-import { tabMenu } from './tabMenu';
 
-export function balanceMenu(balanceTabs, balanceContents) {
-    let props = {
-        TAB: '.balance__tab-content',
-        CONTENT: '.balance__diagram',
-        CLASS_ACTIVE_TAB: '.balance__tab-content_active',
-        CLASS_ACTIVE_CONTENT: '.balance__diagram_opened',
-        ACTIVE_TAB: 'balance__tab-content_active',
-        ACTIVE_CONTENT: 'balance__diagram_opened',
+export function balanceMenu(balanceDiagram) {
+    var progressValue = balanceDiagram.querySelector('.progress-bar__value');
+    console.log(progressValue);
+
+    var RADIUS = 60;
+    var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+    function progress(value) {
+        var progress = value / 100;
+        var dashoffset = CIRCUMFERENCE * (1 - progress);
+        console.log('progress:', value + '%');
+        progressValue.style.strokeDashoffset = dashoffset;
     }
-
-    // tabMenu(balanceTabs, balanceContents, props);
+    progressValue.style.strokeDasharray = CIRCUMFERENCE;
+    progress(60);
 }

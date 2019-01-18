@@ -1,5 +1,6 @@
 import { notificationMenu } from './notificationMenu';
 import { filterMenu } from './filterMenu';
+import { balanceMenu } from './balanceMenu';
 
 const notificationBtn = document.querySelector('.header__notification');
 notificationMenu(notificationBtn);
@@ -9,6 +10,13 @@ const fitlerXsScreen = document.querySelector('.previous-lesson__filter_xs');
 filterMenu(fitlerAllScreen);
 filterMenu(fitlerXsScreen);
 
+
+const balanceDiagram = document.querySelectorAll('.balance__diagram');
+for (let i = 0; i < balanceDiagram.length; i++) {
+    balanceMenu(balanceDiagram[i]);
+}
+
+// balanceMenu(balanceDiagramXsScreen);
 
 //sidebar open
 const sidebarToggle = document.querySelector('.sidebar__toggle');
@@ -41,16 +49,3 @@ window.addEventListener("orientationchange", function () {
 
 
 //new
-var progressValue = document.querySelector('.progress-bar__value');
-
-var RADIUS = 60;
-var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
-
-function progress(value) {
-    var progress = value / 100;
-    var dashoffset = CIRCUMFERENCE * (1 - progress);
-    console.log('progress:', value + '%');
-    progressValue.style.strokeDashoffset = dashoffset;
-}
-progressValue.style.strokeDasharray = CIRCUMFERENCE;
-progress(60);

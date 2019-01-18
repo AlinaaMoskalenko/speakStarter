@@ -102,6 +102,8 @@ var _notificationMenu = __webpack_require__(360);
 
 var _filterMenu = __webpack_require__(361);
 
+var _balanceMenu = __webpack_require__(362);
+
 var notificationBtn = document.querySelector('.header__notification');
 (0, _notificationMenu.notificationMenu)(notificationBtn);
 
@@ -109,6 +111,13 @@ var fitlerAllScreen = document.querySelector('.previous-lesson__filter');
 var fitlerXsScreen = document.querySelector('.previous-lesson__filter_xs');
 (0, _filterMenu.filterMenu)(fitlerAllScreen);
 (0, _filterMenu.filterMenu)(fitlerXsScreen);
+
+var balanceDiagram = document.querySelectorAll('.balance__diagram');
+for (var i = 0; i < balanceDiagram.length; i++) {
+    (0, _balanceMenu.balanceMenu)(balanceDiagram[i]);
+}
+
+// balanceMenu(balanceDiagramXsScreen);
 
 //sidebar open
 var sidebarToggle = document.querySelector('.sidebar__toggle');
@@ -124,15 +133,15 @@ sidebarToggle.addEventListener('click', function () {
 var lessonOption = document.querySelectorAll('.scheduled-lesson__options');
 var lessonAction = document.querySelectorAll('.next-lesson__action');
 
-var _loop = function _loop(i) {
-    lessonOption[i].addEventListener('click', function (event) {
+var _loop = function _loop(_i) {
+    lessonOption[_i].addEventListener('click', function (event) {
         event.target.classList.toggle('scheduled-lesson__options_opened');
-        lessonAction[i].classList.toggle('next-lesson__action_opened');
+        lessonAction[_i].classList.toggle('next-lesson__action_opened');
     });
 };
 
-for (var i = 0; i < lessonOption.length; i++) {
-    _loop(i);
+for (var _i = 0; _i < lessonOption.length; _i++) {
+    _loop(_i);
 }
 
 var sidebarElement = document.querySelector('.wrapper-sidebar');
@@ -141,19 +150,6 @@ window.addEventListener("orientationchange", function () {
 });
 
 //new
-var progressValue = document.querySelector('.progress-bar__value');
-
-var RADIUS = 60;
-var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
-
-function progress(value) {
-    var progress = value / 100;
-    var dashoffset = CIRCUMFERENCE * (1 - progress);
-    console.log('progress:', value + '%');
-    progressValue.style.strokeDashoffset = dashoffset;
-}
-progressValue.style.strokeDasharray = CIRCUMFERENCE;
-progress(60);
 
 /***/ }),
 
@@ -209,6 +205,35 @@ function filterMenu(targetFilter) {
         toggle.classList.remove('select-arrow-active');
         items.classList.add('items_hidden');
     }
+}
+
+/***/ }),
+
+/***/ 362:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.balanceMenu = balanceMenu;
+function balanceMenu(balanceDiagram) {
+    var progressValue = balanceDiagram.querySelector('.progress-bar__value');
+    console.log(progressValue);
+
+    var RADIUS = 60;
+    var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+    function progress(value) {
+        var progress = value / 100;
+        var dashoffset = CIRCUMFERENCE * (1 - progress);
+        console.log('progress:', value + '%');
+        progressValue.style.strokeDashoffset = dashoffset;
+    }
+    progressValue.style.strokeDasharray = CIRCUMFERENCE;
+    progress(60);
 }
 
 /***/ })

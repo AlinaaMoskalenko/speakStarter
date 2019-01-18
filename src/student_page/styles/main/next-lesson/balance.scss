@@ -41,17 +41,8 @@ $tab-color-text-active: #ffffff;
     }
   }
   &__diagram {
-    // width: 0;
-    // height: 0;
-    // opacity: 0;
-    // border-radius: 50%;
-    // border: 1px solid $green-color;
-    // background-color: $light-green-bg-color;
     @include flex-center-center;
-    // color: $green-color;
-    // font-size: $font-size-8;
     position: relative;
-    // overflow: hidden;
     .diagram {
       &__text {
         position: absolute;
@@ -59,9 +50,6 @@ $tab-color-text-active: #ffffff;
         left: 50%;
         transform: translate(-50%, -50%);
         @include flex-column-align-center;
-        // font-size: 1.79rem;
-        // margin-right: 5px;
-        // z-index: $z-index-2;
       }
       &__amount-lessons {
         font-size: 2rem;
@@ -73,21 +61,7 @@ $tab-color-text-active: #ffffff;
         transform: rotate(-90deg);
       }
     }
-
-    // width: 157px;
-    // height: 157px;
   }
-  // &__symbol {
-  //   width: 15px;
-  //   height: 19px;
-  //   // z-index: $z-index-2;
-  //   .money-symbol {
-  //     fill: $green-color;
-  //     stroke: $green-color;
-  //     stroke-miterlimit: 10;
-  //     stroke-width: 1.5px;
-  //   }
-  // }
   &__description {
     width: 141px;
     height: 47px;
@@ -116,6 +90,9 @@ $tab-color-text-active: #ffffff;
 .progress-bar__value {
   stroke: url(#gradient);
   stroke-linecap: round;
+  @include xs{
+    stroke: url(#gradient_1);
+  }
 }
 
 // @keyframes loading {

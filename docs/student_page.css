@@ -4773,6 +4773,9 @@ a {
 .progress-bar__value {
   stroke: url(#gradient);
   stroke-linecap: round; }
+  @media (max-width: 575.9px) {
+    .progress-bar__value {
+      stroke: url(#gradient_1); } }
 
 .sidebar {
   background-color: #ffffff;
