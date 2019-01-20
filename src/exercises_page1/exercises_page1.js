@@ -9,11 +9,11 @@ import notification from '../common/scripts/notification';
 // export default function sidebar() {
 const sidebarToggle = document.querySelector('.sidebar__toggle');
 const sidebar = document.querySelector('.sidebar');
-const content = document.querySelector('.content-conteiner');
+const content = document.querySelector('.content-container');
 
 sidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar_opened');
-    content.classList.toggle('content-conteiner_hidden');
+    content.classList.toggle('content-container_hidden');
 });
 
 
@@ -23,7 +23,7 @@ document.addEventListener('touchstart', closeSidebar);
 function closeSidebar() {
     if (event.target.classList.contains('wrapper')) {
         sidebar.classList.remove('sidebar_opened');
-        content.classList.remove('content-conteiner_hidden');
+        content.classList.remove('content-container_hidden');
     }
 }
 

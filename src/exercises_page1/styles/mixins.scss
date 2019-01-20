@@ -113,6 +113,13 @@ $lg-screen: 1370px;
   flex-wrap: wrap;
 }
 
+//new
+@mixin flex-justify-center-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 @mixin flex-column-justify-center {
   display: flex;
   flex-direction: column;
