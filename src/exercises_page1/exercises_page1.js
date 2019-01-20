@@ -30,3 +30,12 @@ function closeSidebar() {
 
 const notificationBtn = document.querySelector('.header__notification');
 notification(notificationBtn);
+
+
+const categoriesBlocks = document.querySelectorAll('.main__category-block');
+for (let i = 0; i < categoriesBlocks.length; i++) {
+    categoriesBlocks[i].addEventListener('click', () => {
+        event.target.parentNode.classList.toggle('main__category-block_opened');
+    });
+}
+

@@ -35,37 +35,34 @@
     transform: rotate(135deg) translateY(-50%);
     cursor: pointer;
   }
-  &_opened {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: $light-green-bg-color;
-    &:before {
-      border-bottom-left-radius: 0;
-    }
-    &:after {
-      top: 40%;
-      transform: rotate(-45deg) translateY(50%);
-      border-color: $html-color-text;
-    }
-  }
 }
 
 .subcategory {
   @include flex-justify-center-wrap;
-  padding: 15px 0;
+  opacity: 0;
+  height: 0;
   background-color: $bg-color-content;
   border-bottom-right-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
   &__item {
+    display: none;
     flex-basis: 45%;
     height: 94px;
     border: 1px solid $subcategory-border-color;
     border-radius: $border-radius;
     margin: 15px;
     padding: 0 20px;
-    @include flex-align-center;
     &:hover {
       border-color: $light-green-color;
+    }
+    @include sm {
+      flex-basis: 100%;
+      &:nth-child(n) {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   &__img {
