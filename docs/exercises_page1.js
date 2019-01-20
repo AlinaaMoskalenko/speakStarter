@@ -142,9 +142,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = notification;
 function notification(notificationBtn) {
-    var notification = notificationBtn.querySelector('.notification__conteiner');
+    var notification = notificationBtn.querySelector('.notification__container');
     notificationBtn.addEventListener('click', function () {
-        notification.classList.toggle('notification__conteiner_opened');
+        notification.classList.toggle('notification__container_opened');
     });
 }
 
