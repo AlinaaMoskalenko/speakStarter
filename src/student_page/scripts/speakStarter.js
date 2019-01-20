@@ -1,6 +1,9 @@
 import { notificationMenu } from './notificationMenu';
 import { filterMenu } from './filterMenu';
 import { balanceMenu } from './balanceMenu';
+import { sidebarMenu } from './sidebarMenu';
+
+sidebarMenu();
 
 const notificationBtn = document.querySelector('.header__notification');
 notificationMenu(notificationBtn);
@@ -16,17 +19,6 @@ for (let i = 0; i < balanceDiagram.length; i++) {
     balanceMenu(balanceDiagram[i]);
 }
 
-// balanceMenu(balanceDiagramXsScreen);
-
-//sidebar open
-const sidebarToggle = document.querySelector('.sidebar__toggle');
-const sidebar = document.querySelector('.wrapper-sidebar');
-const content = document.querySelector('.wrapper__content');
-
-sidebarToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('wrapper-sidebar_opened');
-    content.classList.toggle('wrapper__content_hidden');
-});
 
 //next lesson open options
 const lessonOption = document.querySelectorAll('.scheduled-lesson__options');
@@ -47,5 +39,3 @@ window.addEventListener("orientationchange", function () {
 
 });
 
-
-//new

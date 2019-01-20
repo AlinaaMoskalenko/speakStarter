@@ -1,0 +1,12 @@
+.content-conteiner {
+  flex-basis: 75%;
+  overflow-y: auto;
+  @include lg {
+    width: 100%;
+    &_hidden {
+      background-color: $bg-html;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

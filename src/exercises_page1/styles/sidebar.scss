@@ -1,0 +1,142 @@
+$transition-duration: 0.5s;
+
+.sidebar {
+  flex-basis: 25%;
+  background-color: $bg-color-content;
+  &__toggle {
+    display: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  &__content {
+    width: 280px;
+    padding: 26px 23px;
+    float: right;
+  }
+  &__logo {
+    margin-bottom: 26px;
+    cursor: pointer;
+  }
+  &__links {
+    height: 240px;
+    @include flex-column-justify-between;
+  }
+  @include lg {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    transition: $transition-duration;
+    width: 0;
+    &__toggle {
+      height: 80px;
+      width: 25px;
+      left: 30px;
+      position: absolute;
+      @include flex-column-center-around;
+      padding: 30px 0;
+      cursor: pointer;
+      transition: $transition-duration;
+      .toggle__row {
+        height: 2px;
+        width: 100%;
+        background-color: $light-green-color;
+        border: none;
+        border-radius: 2px;
+      }
+    }
+    &__content {
+      display: none;
+    }
+    &_opened {
+      width: 280px;
+      box-shadow: $box-shadow;
+      overflow: auto;
+      .sidebar__toggle {
+        left: 235px;
+        .toggle__row {
+          background-color: $light-grey-color;
+          &:first-child {
+            position: absolute;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            position: absolute;
+            transform: rotate(-45deg);
+          }
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+      .sidebar__content {
+        display: block;
+      }
+    }
+  }
+}
+
+.link {
+  height: 42px;
+  padding: 0 18px;
+  @include flex-center-between;
+  cursor: pointer;
+  &_active,
+  &:hover {
+    border: none;
+    border-radius: $border-radius;
+    background-color: $light-green-bg-color;
+    color: $green-color;
+    .link__icon-1,
+    .link__icon-2 {
+      stroke: $green-color;
+    }
+  }
+  &__path {
+    @include flex-align-center;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+  &__icon-1 {
+    fill: none;
+    stroke: $sidebar-icon-color;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5px;
+  }
+  &__icon-hometasks {
+    .link__icon-1,
+    .link__icon-2 {
+      fill: none;
+      stroke: $sidebar-icon-color;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .link__icon-1 {
+      stroke-width: 1.5px;
+    }
+  }
+  &__icon-payments {
+    .link__icon-2 {
+      fill: $sidebar-icon-color;
+    }
+  }
+  &_active {
+    .link__icon-1,
+    .link__icon-2 {
+      stroke: $green-color;
+    }
+  }
+  &__text {
+    margin-left: 10px;
+  }
+  &__notification {
+    @include flex-center-center;
+    width: 19px;
+    height: 19px;
+    color: #ffffff;
+    font-size: 0.79rem;
+    background-color: $orange-red-color;
+    border-radius: $border-radius;
+  }
+}

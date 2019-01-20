@@ -1,7 +1,5 @@
-
 export function balanceMenu(balanceDiagram) {
     var progressValue = balanceDiagram.querySelector('.progress-bar__value');
-    console.log(progressValue);
 
     var RADIUS = 60;
     var CIRCUMFERENCE = 2 * Math.PI * RADIUS;

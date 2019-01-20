@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+button {
+  font-family: "MuseoSansCyrl500", Helvetica, sans-serif;
+  font-size: $html-font-size;
+  color: $html-color-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+  font-size: 1.07rem;
+}
+
+.title{
+  font-size: 1.79rem;
+}

@@ -7,6 +7,10 @@ export function filterMenu(targetFilter) {
             toggle.textContent = event.target.textContent;
             closeSelectItems();
         });
+        items.children[i].addEventListener('touchstart', (event) => {
+            toggle.textContent = event.target.textContent;
+            closeSelectItems();
+        });
     }
 
     toggle.addEventListener('click', function (event) {
@@ -16,6 +20,7 @@ export function filterMenu(targetFilter) {
     });
 
     document.addEventListener('click', closeSelectItems);
+    document.addEventListener('touchstart', closeSelectItems);
 
     function closeSelectItems() {
         toggle.classList.remove('select-arrow-active');
