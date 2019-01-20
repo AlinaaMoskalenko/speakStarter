@@ -115,6 +115,13 @@ function closeSidebar() {
 var notificationBtn = document.querySelector('.header__notification');
 (0, _notification2.default)(notificationBtn);
 
+var categoriesBlocks = document.querySelectorAll('.main__category-block');
+for (var i = 0; i < categoriesBlocks.length; i++) {
+    categoriesBlocks[i].addEventListener('click', function () {
+        event.target.parentNode.classList.toggle('main__category-block_opened');
+    });
+}
+
 /***/ }),
 
 /***/ 366:
