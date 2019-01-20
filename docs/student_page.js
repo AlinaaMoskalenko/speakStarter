@@ -104,6 +104,10 @@ var _filterMenu = __webpack_require__(361);
 
 var _balanceMenu = __webpack_require__(362);
 
+var _sidebarMenu = __webpack_require__(363);
+
+(0, _sidebarMenu.sidebarMenu)();
+
 var notificationBtn = document.querySelector('.header__notification');
 (0, _notificationMenu.notificationMenu)(notificationBtn);
 
@@ -116,18 +120,6 @@ var balanceDiagram = document.querySelectorAll('.balance__diagram');
 for (var i = 0; i < balanceDiagram.length; i++) {
     (0, _balanceMenu.balanceMenu)(balanceDiagram[i]);
 }
-
-// balanceMenu(balanceDiagramXsScreen);
-
-//sidebar open
-var sidebarToggle = document.querySelector('.sidebar__toggle');
-var sidebar = document.querySelector('.wrapper-sidebar');
-var content = document.querySelector('.wrapper__content');
-
-sidebarToggle.addEventListener('click', function () {
-    sidebar.classList.toggle('wrapper-sidebar_opened');
-    content.classList.toggle('wrapper__content_hidden');
-});
 
 //next lesson open options
 var lessonOption = document.querySelectorAll('.scheduled-lesson__options');
@@ -148,8 +140,6 @@ var sidebarElement = document.querySelector('.wrapper-sidebar');
 window.addEventListener("orientationchange", function () {
     if (sidebarElement.classList.contains('wrapper-sidebar_opened')) sidebarElement.style.transition = 'none';
 });
-
-//new
 
 /***/ }),
 
@@ -191,6 +181,10 @@ function filterMenu(targetFilter) {
             toggle.textContent = event.target.textContent;
             closeSelectItems();
         });
+        items.children[i].addEventListener('touchstart', function (event) {
+            toggle.textContent = event.target.textContent;
+            closeSelectItems();
+        });
     }
 
     toggle.addEventListener('click', function (event) {
@@ -200,6 +194,7 @@ function filterMenu(targetFilter) {
     });
 
     document.addEventListener('click', closeSelectItems);
+    document.addEventListener('touchstart', closeSelectItems);
 
     function closeSelectItems() {
         toggle.classList.remove('select-arrow-active');
@@ -221,7 +216,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.balanceMenu = balanceMenu;
 function balanceMenu(balanceDiagram) {
     var progressValue = balanceDiagram.querySelector('.progress-bar__value');
-    console.log(progressValue);
 
     var RADIUS = 60;
     var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
@@ -234,6 +228,39 @@ function balanceMenu(balanceDiagram) {
     }
     progressValue.style.strokeDasharray = CIRCUMFERENCE;
     progress(60);
+}
+
+/***/ }),
+
+/***/ 363:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.sidebarMenu = sidebarMenu;
+function sidebarMenu() {
+    var sidebarToggle = document.querySelector('.sidebar__toggle');
+    var sidebar = document.querySelector('.wrapper-sidebar');
+    var content = document.querySelector('.wrapper__content');
+
+    sidebarToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('wrapper-sidebar_opened');
+        content.classList.toggle('wrapper__content_hidden');
+    });
+
+    document.addEventListener('click', closeSidebar);
+    document.addEventListener('touchstart', closeSidebar);
+
+    function closeSidebar() {
+        if (event.target.classList.contains('wrapper-sidebar_opened')) {
+            sidebar.classList.remove('wrapper-sidebar_opened');
+            content.classList.remove('wrapper__content_hidden');
+        }
+    }
 }
 
 /***/ })
