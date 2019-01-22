@@ -47,7 +47,7 @@
   &__item {
     display: none;
     flex-basis: 45%;
-    height: 94px;
+    min-height: 94px;
     border: 1px solid $subcategory-border-color;
     border-radius: $border-radius;
     margin: 15px;
@@ -64,14 +64,30 @@
         margin-bottom: 0;
       }
     }
+    @include xs {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+    }
   }
   &__img {
     width: 60px;
     height: 60px;
+    @include xs{
+      align-self: flex-start;
+    }
   }
   &__text {
     @include flex-column-justify-around;
     margin-left: 10px;
+    @include xs {
+      margin-left: 0;
+    }
+  }
+  &__title{
+    @include xs{
+      margin: 10px 0;
+    }
   }
   &__subtitle {
     color: $subtitle-color-text;
