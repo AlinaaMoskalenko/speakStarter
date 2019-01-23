@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+<link href="login_page.css" rel="stylesheet"></head>
+
+<body>
+    <div class="login-page__container">
+        <div class="login-page__logo"></div>
+        <form action="" class="login-page__form">
+            <div class="form__title-block login-failed">
+                <h1 class="form__title">Авторизация</h1>
+                <div class="error-data">Неверный email или пароль</div>
+            </div>
+            <div class="form__input-block">
+                <div>
+                    <input type="text" class="form__input" placeholder="Email">
+                    <div class="error-data">Введите email</div>
+                </div>
+                <div class=" login-failed">
+                    <input type="password" class="form__input" placeholder="Пароль">
+                    <div class="error-data">Введите пароль</div>
+                </div>
+            </div>
+            <div class="form__checkbox-block">
+                <input type="checkbox" id="check" class="form__checkbox">
+                <label for="check">Запомнить</label>
+            </div>
+            <button type="submit" class="form__button">Войти</button>
+        </form>
+    </div>
+<script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="login_page.js"></script></body>
+
+</html>

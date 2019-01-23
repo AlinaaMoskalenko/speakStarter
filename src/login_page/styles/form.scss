@@ -1,0 +1,117 @@
+.form {
+  &__title-block {
+    text-align: center;
+  }
+  &__title {
+    @include xs {
+      font-size: 1.5rem;
+    }
+  }
+  &__input-block {
+    margin-top: 10px;
+    width: 100%;
+    @include xs {
+      margin-top: 5px;
+    }
+  }
+  &__input {
+    height: 50px;
+    width: 100%;
+    border-radius: $border-radius;
+    border: 1px solid $grey-color;
+    padding: 0 13px;
+    font-size: 1.14rem;
+    outline: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      border: 1.5px solid $green-color;
+    }
+    &:focus::placeholder {
+      opacity: 0;
+    }
+    @include xs {
+      height: 45px;
+    }
+  }
+  &__button {
+    width: 100%;
+    border: 1px solid $green-color;
+    border-radius: $border-radius;
+    color: #ffffff;
+    background-color: $green-color;
+    font-size: 1.29rem;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 0;
+    &:hover {
+      background-color: transparent;
+      color: $green-color;
+      transition: background-color 0.2s;
+    }
+    @include xs {
+      padding: 12px 0;
+    }
+  }
+  &__checkbox-block {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    align-self: flex-start;
+  }
+  &__checkbox {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    & + label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      &:before {
+        position: absolute;
+        content: "";
+        top: -2px;
+        left: 0px;
+        width: 18px;
+        height: 18px;
+        border-radius: 3px;
+        border: 1px solid $green-color;
+      }
+      &:after {
+        opacity: 0;
+      }
+    }
+    &:checked + label {
+      &:before {
+        background-color: $green-color;
+        border: none;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        height: 8px;
+        width: 4px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.error-data {
+  margin: 5px 0;
+  color: $orange-red-color;
+  font-size: 0.86rem;
+  opacity: 0;
+}
+
+.login-failed {
+  .form__input {
+    border: 1.5px solid $orange-red-color;
+  }
+  .error-data {
+    opacity: 1;
+  }
+}
