@@ -1,0 +1,88 @@
+
+.notification {
+    &__container {
+      display: none;
+      position: absolute;
+      top: 80px;
+      width: 400px;
+      background-color: #ffffff;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      transform: translateX(-40%);
+      z-index: 1;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 23px;
+        top: -34px;
+        border: 17px solid transparent;
+        border-bottom: 17px solid #ffffff;
+        @include sm {
+          right: 19px;
+        }
+        @include xs {
+          right: 82px;
+        }
+      }
+      &_opened {
+        display: block;
+      }
+      @include sm {
+        width: 300px;
+        transform: translateX(-38%);
+      }
+      @include xs {
+        width: 250px;
+        transform: translateX(-10%);
+      }
+    }
+    &__caption {
+      padding: 16px 30px;
+      font-size: 1.29rem;
+      @include sm {
+        padding-bottom: 10px;
+      }
+      @include xs {
+        font-size: 1.14rem;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    &__details {
+      padding: 0 30px;
+      height: 67px;
+      @include flex-column-justify-center;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid #f7f7f7;
+        border-left: none;
+        border-right: none;
+        background-color: #fbfcfc;
+      }
+      @include xs {
+        padding: 0 20px;
+      }
+    }
+    &__message {
+      @include flex-align-center;
+    }
+    &__state {
+      min-width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-right: 15px;
+      &_new-homework {
+        background-color: #f0baa8;
+      }
+      &_no-homework {
+        background-color: #8dcddd;
+      }
+    }
+    &__subtitle {
+      padding: 5px 0 0 24px;
+      color: $grey;
+      @include xs {
+        font-size: 0.86rem;
+      }
+    }
+  }

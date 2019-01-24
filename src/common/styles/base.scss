@@ -1,0 +1,91 @@
+$font-stack: "MuseoSansCyrl500", Helvetica, sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+button,
+input {
+  font: 500 14px $font-stack;
+  color: $primary;
+}
+
+body {
+  background-color: $bg-body;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+  font-size: 1.07rem;
+}
+
+h1 {
+  font-size: 1.79rem;
+}
+
+h3 {
+  font-size: 1.14rem;
+}
+
+h4 {
+  font-size: inherit;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  @include lg {
+    display: block;
+    position: relative;
+  }
+}
+
+.content-container {
+  flex-basis: 75%;
+  overflow-y: auto;
+  @include lg {
+    width: 100%;
+    &_hidden {
+      background-color: $bg-body;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+.main {
+  display: flex;
+
+  /* temporary comment
+  padding-top: $main-block-padding;
+  padding-left: $main-block-padding;
+  */
+}

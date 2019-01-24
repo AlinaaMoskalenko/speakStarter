@@ -27,14 +27,14 @@ $transition-duration: 0.5s;
       .category {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
-        background-color: $light-green-bg-color;
+        background-color: $bg-light-green;
         &:before {
           border-bottom-left-radius: 0;
         }
         &:after {
           top: 40%;
           transform: rotate(-45deg) translateY(50%);
-          border-color: $html-color-text;
+          border-color: $primary;
         }
       }
       .subcategory {

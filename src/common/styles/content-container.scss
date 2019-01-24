@@ -4,7 +4,7 @@
   @include lg {
     width: 100%;
     &_hidden {
-      background-color: $bg-html;
+      background-color: $bg-body;
       opacity: 0.5;
       pointer-events: none;
     }

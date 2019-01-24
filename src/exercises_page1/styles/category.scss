@@ -3,7 +3,7 @@
   height: 60px;
   border-radius: $border-radius;
   position: relative;
-  background-color: $bg-color-content;
+  background-color: $bg-white;
   padding: 0 50px 0 30px;
   white-space: nowrap;
   overflow: hidden;
@@ -20,7 +20,7 @@
     height: 100%;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
-    background-color: $light-green-color;
+    background-color: $light-green;
   }
   &:after {
     content: "";
@@ -29,7 +29,7 @@
     top: 30%;
     width: 10px;
     height: 10px;
-    border: 2px solid $subtitle-color-text;
+    border: 2px solid $grey;
     border-left: none;
     border-bottom: none;
     transform: rotate(135deg) translateY(-50%);
@@ -41,7 +41,7 @@
   @include flex-justify-center-wrap;
   opacity: 0;
   height: 0;
-  background-color: $bg-color-content;
+  background-color: $bg-white;
   border-bottom-right-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
   &__item {
@@ -53,7 +53,7 @@
     margin: 15px;
     padding: 0 20px;
     &:hover {
-      border-color: $light-green-color;
+      border-color: $light-green;
     }
     @include sm {
       flex-basis: 100%;
@@ -71,9 +71,10 @@
     }
   }
   &__img {
-    width: 60px;
+    min-width: 60px;
     height: 60px;
-    @include xs{
+    background: url("../../assets/images/speakStarter/exercises_img.svg");
+    @include xs {
       align-self: flex-start;
     }
   }
@@ -84,12 +85,12 @@
       margin-left: 0;
     }
   }
-  &__title{
-    @include xs{
+  &__title {
+    @include xs {
       margin: 10px 0;
     }
   }
   &__subtitle {
-    color: $subtitle-color-text;
+    color: $grey;
   }
 }

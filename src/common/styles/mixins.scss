@@ -88,6 +88,12 @@ $lg-screen: 1370px;
   justify-content: space-around;
 }
 
+@mixin flex-justify-center-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 @mixin flex-center-center {
   display: flex;
   align-items: center;
@@ -109,13 +115,6 @@ $lg-screen: 1370px;
 @mixin flex-center-center-wrap {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-//new
-@mixin flex-justify-center-wrap {
-  display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }

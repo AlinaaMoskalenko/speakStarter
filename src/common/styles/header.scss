@@ -1,0 +1,68 @@
+$border: 1px solid $light-grey;
+
+.header {
+  height: 80px;
+  border-bottom: $border;
+  @include flex-row-reverse;
+  &__user {
+    @include flex-align-center;
+    flex-basis: 35%;
+    border-left: $border;
+    padding: 0 20px;
+    cursor: pointer;
+    @include xs {
+      flex-basis: 10%;
+    }
+  }
+  &__notification {
+    @include flex-center-center;
+    flex-basis: 5%;
+    border-left: $border;
+    min-width: 70px;
+    cursor: pointer;
+  }
+  &__notification-icon {
+    position: relative;
+    pointer-events: none;
+  }
+}
+
+.user {
+  &__photo {
+    width: 42px;
+    height: 41px;
+    overflow: hidden;
+    border-radius: $border-radius;
+    .photo {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+    }
+  }
+  &__name {
+    margin-left: 10px;
+    @include xs {
+      display: none;
+    }
+  }
+}
+
+.notification {
+  &__bell {
+    pointer-events: none;
+    width: 28px;
+    height: 26px;
+    background: url("../../assets/images/speakStarter/bell.svg");
+  }
+  &__indicator {
+    position: absolute;
+    top: -3px;
+    right: 3px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    background-color: $main-orange;
+    pointer-events: none;
+  }
+}
