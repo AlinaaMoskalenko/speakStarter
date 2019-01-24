@@ -1,0 +1,25 @@
+.main {
+  flex-direction: column;
+  //   temporary property
+  padding: 45px;
+  &__container {
+    &:first-child {
+      display: flex;
+    }
+  }
+  &__content {
+    &:first-child {
+      //   flex-basis: 60%;
+      //   if main padding:45px
+      flex-basis: 62%;
+    }
+  }
+}
+
+
+// .balance__symbol{
+//     width: 15px;
+//     height: 19px;
+//     // z-index: $z-index-2;
+//     background: url('../../assets/img/index/сurrency-symbol.svg') no-repeat;
+// }

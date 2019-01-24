@@ -2,8 +2,7 @@ $subcategory-border-color: #ededed;
 $transition-duration: 0.5s;
 
 .main {
-  display: flex;
-  padding: 45px;
+  padding: $main-block-padding;
   &__container {
     flex-basis: 80%;
     @include lg {
@@ -11,7 +10,7 @@ $transition-duration: 0.5s;
     }
   }
   &__category-container {
-    margin-top: 12px;
+    margin-top: $block-margin;
   }
   &__category-block {
     cursor: pointer;

@@ -11,6 +11,13 @@ input {
   color: $primary;
 }
 
+//new property
+button,
+input {
+  cursor: pointer;
+  outline: none;
+}
+
 body {
   background-color: $bg-body;
   -webkit-tap-highlight-color: transparent;
@@ -40,6 +47,7 @@ h6 {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 li {
@@ -83,9 +91,11 @@ h4 {
 
 .main {
   display: flex;
-
-  /* temporary comment
   padding-top: $main-block-padding;
   padding-left: $main-block-padding;
-  */
+
+  //new property
+  @include xs {
+    padding: calc($main-block-padding - 10px);
+  }
 }
