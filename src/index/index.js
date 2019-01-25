@@ -3,6 +3,7 @@ import sidebar from '../common/scripts/sidebar';
 import notification from '../common/scripts/notification';
 import balanceTabsToggle from './scripts/balance';
 import nxtLesson from './scripts/nxt-lesson';
+import slider from './scripts/slider';
 
 sidebar();
 
@@ -19,3 +20,6 @@ const nxtLessonItems = document.querySelectorAll('.nxt-lesson__item');
 for (let i = 0; i < nxtLessonItems.length; i++) {
     nxtLesson(nxtLessonItems[i]);
 }
+
+const sliderToggles = document.querySelector('.nxt-lesson__slider-block');
+slider(sliderToggles);
