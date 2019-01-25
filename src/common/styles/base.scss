@@ -91,11 +91,14 @@ h4 {
 
 .main {
   display: flex;
-  padding-top: $main-block-padding;
-  padding-left: $main-block-padding;
+  // padding-top: $main-block-padding;
+  // padding-left: $main-block-padding;
+
+  //new property
+  padding: $main-block-padding;
 
   //new property
   @include xs {
-    padding: calc($main-block-padding - 10px);
+    padding: $main-block-padding calc(#{$main-block-padding} - 15px);
   }
 }

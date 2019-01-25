@@ -1,0 +1,160 @@
+.nxt-lesson {
+  &__card {
+    margin-top: $block-margin;
+    width: 100%;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+  }
+  &__header-block {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    background-color: $bg-white;
+    padding: 13px 20px;
+    @include flex-align-center;
+    font-size: 1.21rem;
+    .date {
+      &__icon {
+        width: 36px;
+        height: 38px;
+        background: url("../../assets/img/calendar/calendar.svg") center
+          no-repeat;
+        background-size: contain;
+        position: relative;
+        text-align: center;
+        & > span {
+          position: absolute;
+          top: 65%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    & > span {
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+  }
+  &__item {
+    margin-top: 2px;
+    background-color: $bg-white;
+    padding: 13px 20px;
+    animation: item-animation 1s;
+    position: relative;
+    &:last-child {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+    .toggle {
+      border-color: $light-green;
+      transform: rotate(135deg);
+      position: absolute;
+      top: 30px;
+      right: 25px;
+    }
+  }
+  &__time {
+    font-size: 1.36rem;
+  }
+  &__student {
+    font-size: 1.07rem;
+    padding: 5px 0;
+    color: $text-grey;
+  }
+  &__student-login {
+    color: $main-green;
+    text-decoration: underline;
+  }
+  &__btn {
+    opacity: 0;
+    transition: 0.5s;
+    & > button {
+      display: none;
+      border: none;
+      border-bottom: 1px dashed #d1d1d1;
+      background-color: transparent;
+      color: $text-grey;
+      &:first-child {
+        margin-right: 24px;
+      }
+      &:hover {
+        &:first-child {
+          color: $main-orange;
+          border-color: $main-orange;
+        }
+        color: $main-green;
+        border-color: $main-green;
+      }
+    }
+  }
+  &__item_opened {
+    .nxt-lesson__btn {
+      opacity: 1;
+      padding-top: 13px;
+      & > button {
+        display: inline-block;
+      }
+    }
+    .toggle {
+      border-color: $main-green;
+      transform: rotate(-45deg);
+    }
+  }
+  &__slider-block {
+    width: 100%;
+    @include flex-justify-center;
+    margin: 20px 0;
+    .toggle {
+      &:first-child {
+        transform: rotate(-135deg);
+      }
+      &:last-child {
+        transform: rotate(45deg);
+      }
+      &:hover {
+        transform: scale(1.3);
+        border-color: $main-orange;
+        &:first-child {
+          transform: scale(1.3) rotate(-135deg);
+        }
+        &:last-child {
+          transform: scale(1.3) rotate(45deg);
+        }
+      }
+    }
+  }
+  &__btn-add-lesson {
+    margin: 20px 0;
+    width: 100%;
+    padding: 13px 0;
+    border: 1px solid $main-green;
+    border-radius: $border-radius;
+    color: $main-green;
+    background-color: transparent;
+    font-size: 1.14rem;
+    &:before {
+      content: "+";
+      font-size: 1.29rem;
+      margin-right: 3px;
+    }
+    &:hover {
+      background-color: $bg-light-green;
+    }
+  }
+}
+
+.toggle {
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid $grey;
+  border-right: 1px solid $grey;
+  cursor: pointer;
+}
+
+@keyframes item-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,10 +1,16 @@
+$nxt-and-balance-width: 254px;
 .main {
   flex-direction: column;
-  //   temporary property
-  padding: 45px;
   &__container {
     &:first-child {
       display: flex;
+    }
+    &:last-child {
+      display: none;
+      @include xs {
+        width: $nxt-and-balance-width;
+        @include flex-column-align-center;
+      }
     }
   }
   &__content {
@@ -13,13 +19,13 @@
       //   if main padding:45px
       flex-basis: 62%;
     }
+    &:last-child {
+      width: $nxt-and-balance-width;
+      .main__content-block:last-child {
+        @include xs {
+          display: none;
+        }
+      }
+    }
   }
 }
-
-
-// .balance__symbol{
-//     width: 15px;
-//     height: 19px;
-//     // z-index: $z-index-2;
-//     background: url('../../assets/img/index/сurrency-symbol.svg') no-repeat;
-// }
