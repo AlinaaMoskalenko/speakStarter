@@ -4,12 +4,17 @@ $nxt-and-balance-width: 254px;
   &__container {
     &:first-child {
       display: flex;
+      @include lg {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
     }
     &:last-child {
       display: none;
-      @include xs {
+      @include md {
+        align-self: center;
         width: $nxt-and-balance-width;
-        @include flex-column-align-center;
+        @include flex-column;
       }
     }
   }
@@ -21,10 +26,30 @@ $nxt-and-balance-width: 254px;
     }
     &:last-child {
       width: $nxt-and-balance-width;
+      @include md- {
+        width: 80%;
+      }
+      @include sm- {
+        width: 100%;
+      }
       .main__content-block:last-child {
-        @include xs {
+        @include md {
           display: none;
         }
+      }
+    }
+  }
+  &__content-block {
+    @include md- {
+      @include flex-column-align-center;
+      & > h1 {
+        align-self: flex-start;
+      }
+    }
+    @include sm- {
+      @include flex-column-align-center;
+      & > h1 {
+        align-self: flex-start;
       }
     }
   }
