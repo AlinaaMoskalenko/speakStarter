@@ -90,46 +90,24 @@ $transition-duration: 0.5s;
     border-radius: $border-radius;
     background-color: $bg-light-green;
     color: $main-green;
-    .link__icon-1,
-    .link__icon-2 {
-      stroke: $main-green;
+    .link__path > i:before {
+      color: $main-green;
     }
   }
   &__path {
     @include flex-align-center;
-  }
-  &__icon {
-    width: 20px;
-    height: 20px;
-  }
-  &__icon-1 {
-    fill: none;
-    stroke: $sidebar-icon;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 1.5px;
-  }
-  &__icon-hometasks {
-    .link__icon-1,
-    .link__icon-2 {
-      fill: none;
-      stroke: $sidebar-icon;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .link__icon-1 {
-      stroke-width: 1.5px;
+    & > i {
+      font-size: 20px;
     }
   }
-  &__icon-payments {
-    .link__icon-2 {
-      fill: $sidebar-icon;
+  &:nth-child(2) {
+    .link__path > i {
+      font-size: 16px;
     }
   }
-  &_active {
-    .link__icon-1,
-    .link__icon-2 {
-      stroke: $main-green;
+  &:nth-child(3){
+    .link__path > i {
+      font-size: 17px;
     }
   }
   &__text {
