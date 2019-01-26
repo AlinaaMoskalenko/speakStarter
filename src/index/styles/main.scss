@@ -4,7 +4,7 @@ $nxt-and-balance-width: 254px;
   &__container {
     &:first-child {
       display: flex;
-      @include lg {
+      @include md {
         flex-direction: column-reverse;
         align-items: center;
       }
@@ -23,6 +23,14 @@ $nxt-and-balance-width: 254px;
       //   flex-basis: 60%;
       //   if main padding:45px
       flex-basis: 62%;
+      margin-right: calc(#{$main-block-padding} - 10px);
+      @include md {
+        width: 80%;
+        margin-right: 0;
+      }
+      @include sm {
+        width: 100%;
+      }
     }
     &:last-child {
       width: $nxt-and-balance-width;
@@ -30,6 +38,9 @@ $nxt-and-balance-width: 254px;
         width: 80%;
       }
       @include sm- {
+        width: 100%;
+      }
+      @include xs {
         width: 100%;
       }
       .main__content-block:last-child {
@@ -40,13 +51,7 @@ $nxt-and-balance-width: 254px;
     }
   }
   &__content-block {
-    @include md- {
-      @include flex-column-align-center;
-      & > h1 {
-        align-self: flex-start;
-      }
-    }
-    @include sm- {
+    @include md {
       @include flex-column-align-center;
       & > h1 {
         align-self: flex-start;

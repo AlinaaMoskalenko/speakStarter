@@ -134,7 +134,26 @@
             <main class="main">
                 <div class="main__container">
                     <div class="main__content">
-                        <h1>Предыдущие уроки</h1>
+                        <div class="prev-lesson__header-block">
+                            <h1>Предыдущие уроки</h1>
+                            <div class="prev-lesson__filter">
+                                <button class="selected">задать д/з</button>
+                                <button>ожидается д/з</button>
+                                <button>проверить д/з</button>
+                            </div>
+                            <div class="prev-lesson__dropdown-filter">
+                                <div class="selected-item">
+                                    Выбрать...
+                                </div>
+                                <div class="items items_hidden">
+                                    <div>Выбрать...</div>
+                                    <div>Задать д/з</div>
+                                    <div>Ожидается д/з</div>
+                                    <div>Проверить д/з</div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                     <div class="main__content">
                         <div class="main__content-block">
@@ -436,7 +455,6 @@
                             </div>
                         </div>
                         <div class="loading-circle">
-                            <img src="../../assets/img/spinner/spin.svg" alt="Spin" class="circle-spin">
                         </div>
                     </section>
                     <section class="main__previous-lesson main__previous-lesson_xs">
@@ -703,7 +721,6 @@
                             </div>
                         </div>
                         <div class="loading-circle">
-                            <img src="../../assets/img/spinner/spin.svg" alt="Spin" class="circle-spin">
                         </div>
                 </section>
         </div>
