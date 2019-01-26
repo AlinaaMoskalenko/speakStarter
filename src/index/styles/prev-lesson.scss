@@ -78,7 +78,7 @@
         border-top: none;
         transform: rotate(45deg);
       }
-      &_opened{
+      &_opened {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         &:after {
@@ -118,6 +118,63 @@
     @include xs {
       margin-top: 12px;
       align-self: flex-end;
+    }
+  }
+  &__card {
+    margin-top: 12px;
+    border-radius: $border-radius;
+    background-color: $bg-white;
+    box-shadow: $box-shadow;
+    @include flex-center-between;
+    padding: 13px;
+    padding-right: 30px;
+  }
+  &__info {
+    @include flex-align-center;
+  }
+  &__number {
+    width: 61px;
+    height: 61px;
+    background-color: $bg-light-green;
+    border: 1px solid $main-green;
+    border-radius: $border-radius;
+    color: $main-green;
+    font-size: 1.57rem;
+    @include flex-column-center-center;
+    &:after {
+      content: "урок";
+      font-size: 1rem;
+    }
+  }
+  &__details {
+    padding: 0 16px;
+  }
+  &__subtitle {
+    margin-top: 8px;
+    color: $grey;
+  }
+  &__btn {
+    display: flex;
+    & > button {
+      border: 1px solid transparent;
+      border-radius: $border-radius;
+      background-color: transparent;
+      padding: 9px 20px;
+      &:first-child {
+        border-color: $main-green;
+        color: $main-green;
+        margin-right: 10px;
+        &:hover {
+          background-color: $bg-light-green;
+        }
+      }
+      &:last-child {
+        border-color: $main-orange;
+        color: $main-orange;
+        &:hover {
+          background-color: $light-pink;
+        }
+      }
     }
   }
 }
