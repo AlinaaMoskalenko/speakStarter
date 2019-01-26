@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="40" viewBox="0 0 28 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff9975;
+      }
+
+      .cls-2 {
+        fill: #ffa180;
+      }
+
+      .cls-3 {
+        fill: #ffb297;
+      }
+
+      .cls-4 {
+        fill: #feb69c;
+      }
+
+      .cls-5 {
+        fill: #ffc6b3;
+      }
+
+      .cls-6 {
+        fill: #fccfc1;
+      }
+
+      .cls-7 {
+        fill: #f7d2c6;
+      }
+
+      .cls-8 {
+        fill: #f6dcd3;
+      }
+    </style>
+  </defs>
+  <ellipse class="cls-1" cx="14.766" cy="3.844" rx="3.891" ry="3.844"/>
+  <circle class="cls-2" cx="6.625" cy="8.078" r="3.5"/>
+  <circle class="cls-3" cx="3.109" cy="16.141" r="3.109"/>
+  <ellipse class="cls-4" cx="6.609" cy="24.234" rx="2.734" ry="2.703"/>
+  <circle class="cls-5" cx="14.781" cy="27.688" r="2.344"/>
+  <ellipse class="cls-6" cx="22.938" cy="24.234" rx="1.938" ry="1.922"/>
+  <ellipse class="cls-7" cx="26.438" cy="16.156" rx="1.563" ry="1.531"/>
+  <ellipse class="cls-8" cx="22.953" cy="7.313" rx="1.172" ry="1.156"/>
+</svg>
