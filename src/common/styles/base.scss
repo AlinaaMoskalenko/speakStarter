@@ -11,7 +11,6 @@ input {
   color: $primary;
 }
 
-//new property
 button,
 input {
   cursor: pointer;
@@ -91,13 +90,7 @@ h4 {
 
 .main {
   display: flex;
-  // padding-top: $main-block-padding;
-  // padding-left: $main-block-padding;
-
-  //new property
   padding: $main-block-padding;
-
-  //new property
   @include xs {
     padding: $main-block-padding calc(#{$main-block-padding} - 15px);
   }

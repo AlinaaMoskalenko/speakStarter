@@ -2,7 +2,6 @@ $subcategory-border-color: #ededed;
 $transition-duration: 0.5s;
 
 .main {
-  // padding: $main-block-padding;
   &__container {
     flex-basis: 80%;
     @include lg {

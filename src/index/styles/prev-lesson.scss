@@ -128,12 +128,30 @@
     @include flex-center-between;
     padding: 13px;
     padding-right: 30px;
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include xs {
+      padding: 13px 0;
+      align-items: center;
+    }
   }
   &__info {
     @include flex-align-center;
+    @include xs {
+      flex-direction: column;
+      width: 85%;
+    }
+  }
+  &__info-block {
+    @include flex-justify-between;
+    @include xs {
+      width: 100%;
+    }
   }
   &__number {
-    width: 61px;
+    min-width: 61px;
     height: 61px;
     background-color: $bg-light-green;
     border: 1px solid $main-green;
@@ -148,6 +166,15 @@
   }
   &__details {
     padding: 0 16px;
+    min-width: 290px;
+    @include md {
+      min-width: 0;
+    }
+    @include xs {
+      width: 100%;
+      padding: 0;
+      padding-top: 10px;
+    }
   }
   &__subtitle {
     margin-top: 8px;
@@ -155,6 +182,22 @@
   }
   &__btn {
     display: flex;
+    @include sm {
+      align-self: flex-end;
+    }
+    @include xs {
+      display: none;
+    }
+    &_xs {
+      display: none;
+      @include xs {
+        display: flex;
+        align-self: center;
+      }
+    }
+    &_hidden {
+      display: none;
+    }
     & > button {
       border: 1px solid transparent;
       border-radius: $border-radius;
@@ -163,7 +206,7 @@
       &:first-child {
         border-color: $main-green;
         color: $main-green;
-        margin-right: 10px;
+        margin: 0 10px;
         &:hover {
           background-color: $bg-light-green;
         }
@@ -175,6 +218,104 @@
           background-color: $light-pink;
         }
       }
+      & > i {
+        font-size: 2.5rem;
+      }
+      @include xs {
+        border: none;
+        padding: 0;
+        margin: 0;
+        &:first-child {
+          margin: 0;
+          margin-right: 20px;
+        }
+        &:first-child,
+        &:last-child {
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  &__state {
+    @include flex-align-center;
+    @include sm {
+      align-self: flex-end;
+    }
+    @include xs {
+      display: none;
+    }
+    &_xs {
+      display: none;
+      @include xs {
+        @include flex-column-reverse;
+        align-items: center;
+        max-width: 100px;
+        width: 100%;
+        & > span {
+          text-align: center;
+          padding-top: 5px;
+        }
+        .prev-lesson__state-diagram {
+          margin: 0;
+        }
+      }
+    }
+    &_waiting {
+      & > span {
+        color: $light-green;
+      }
+      .prev-lesson__state-diagram {
+        .state-circle {
+          background: url("../../assets/img/state-circles/circle.svg");
+        }
+      }
+    }
+    &_setting {
+      & > span {
+        color: $blue;
+      }
+      .prev-lesson__state-diagram {
+        .state-circle {
+          background: url("../../assets/img/state-circles/circle_2.svg");
+        }
+        & > i:before {
+          color: $blue;
+        }
+      }
+    }
+    &_checking {
+      & > span {
+        color: $pink;
+      }
+      .prev-lesson__state-diagram {
+        .state-circle {
+          background: url("../../assets/img/state-circles/circle_3.svg");
+        }
+        & > i:before {
+          color: $pink;
+        }
+      }
+    }
+    &_hidden {
+      display: none;
+    }
+  }
+  &__state-diagram {
+    position: relative;
+    margin-left: 20px;
+    .state-circle {
+      transform: rotate(-45deg);
+      width: 51px;
+      height: 51px;
+    }
+    & > i {
+      position: absolute;
+      top: 50%;
+      left: 52%;
+      transform: translate(-50%, -50%);
+      font-size: 17px;
     }
   }
 }

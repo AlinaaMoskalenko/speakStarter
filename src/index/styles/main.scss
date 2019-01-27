@@ -15,18 +15,18 @@ $nxt-and-balance-width: 254px;
         align-self: center;
         width: $nxt-and-balance-width;
         @include flex-column;
+        margin: 20px 0;
       }
     }
   }
   &__content {
     &:first-child {
-      //   flex-basis: 60%;
-      //   if main padding:45px
       flex-basis: 62%;
       margin-right: calc(#{$main-block-padding} - 10px);
       @include md {
-        width: 80%;
+        width: 90%;
         margin-right: 0;
+        margin: 20px 0;
       }
       @include sm {
         width: 100%;
@@ -35,7 +35,7 @@ $nxt-and-balance-width: 254px;
     &:last-child {
       width: $nxt-and-balance-width;
       @include md- {
-        width: 80%;
+        width: 90%;
       }
       @include sm- {
         width: 100%;
