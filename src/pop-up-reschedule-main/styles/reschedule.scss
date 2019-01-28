@@ -1,13 +1,11 @@
-$orange-color: #ea8862;
-
 .reschedule {
   margin: 20px auto; //temporary property
   max-width: 393px;
   width: 100%;
   height: 421px;
-  background-color: #ffffff;
+  background-color: $bg-white;
   border-radius: $border-radius;
-  box-shadow: 0 1px 4px #0000003a;
+  box-shadow: $box-shadow;
   position: relative;
   &:before {
     content: "";
@@ -16,15 +14,12 @@ $orange-color: #ea8862;
     height: 100%;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
-    background-color: #e48e60;
+    background-color: $main-orange;
   }
   &__content {
     height: 100%;
     padding: 20px 34px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: relative;
+    @include flex-column-justify-around;
   }
   &__arrow > i {
     position: absolute;
@@ -37,40 +32,37 @@ $orange-color: #ea8862;
 
 .content {
   &__time-data {
-    display: flex;
-    justify-content: space-between;
+    @include flex-justify-between;
     .lesson {
       flex-basis: 45%;
       &__date {
         font-size: 17px;
         color: #6a6565;
         &_new {
-          color: #e48e60;
+          color: $main-orange;
         }
       }
       &__time {
         font-size: 18px;
         color: #696564;
         &_new {
-          color: #e48e60;
+          color: $main-orange;
         }
       }
-      &__subtitle{
+      &__subtitle {
         font-size: 16px;
         color: #b4b4b4;
       }
     }
   }
   &__user-information {
-    display: flex;
-    align-items: center;
+    @include flex-align-center;
   }
   &__text {
     color: #878787;
   }
   &__checkbox-block {
-    display: flex;
-    justify-content: space-between;
+    @include flex-justify-between;
     width: 60%;
     font-size: 15px;
     color: #535353;
@@ -97,7 +89,7 @@ $orange-color: #ea8862;
     }
     &:checked + label {
       &:before {
-        background-color: $green-color;
+        background-color: $main-green;
         border: none;
       }
       &:after {
@@ -107,7 +99,7 @@ $orange-color: #ea8862;
         top: 3px;
         height: 8px;
         width: 4px;
-        border: solid white;
+        border: solid #ffffff;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
         opacity: 1;
@@ -123,6 +115,10 @@ $orange-color: #ea8862;
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
   }
   &__name {
     font-size: 16px;
@@ -131,19 +127,19 @@ $orange-color: #ea8862;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   &__comment {
     margin-bottom: 15px;
     width: 100%;
     height: 72px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid $light-grey;
     border-radius: $border-radius;
     outline: none;
     padding: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #a8a8a8;
     &::placeholder {
-      font-size: $font-size;
-      font-family: inherit;
       color: #a8a8a8;
     }
   }
@@ -151,8 +147,8 @@ $orange-color: #ea8862;
     width: 100%;
     height: 45px;
     align-self: flex-end;
-    color: $green-color;
-    border: 1px solid $green-color;
+    color: $main-green;
+    border: 1px solid $main-green;
     border-radius: $border-radius;
     background-color: transparent;
     cursor: pointer;
