@@ -1,6 +1,50 @@
-// @import "./styles/font.scss";
-// @import "./styles/variables.scss";
-// @import "./styles/base.scss";
-// @import "./styles/content.scss";
-// @import "./styles/rechedule-success.scss";
+@import "../common/styles.scss";
+@import "./styles/content.scss";
+@import "./styles/rechedule-success.scss";
 
+.wrapper-pop-up-reschedule {
+  max-width: 550px;
+  width: 100%;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  position: relative;
+  margin: 0 auto;
+}
+
+.header-pop-up-reschedule {
+  background-color: #fafafa;
+  font-size: 18px;
+  color: #262626;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  padding: 16px 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 37px;
+  height: 37px;
+  border: 1px solid $light-grey;
+  border-radius: 50%;
+  cursor: pointer;
+  &:before {
+    position: absolute;
+    top: 7px;
+    left: 17px;
+    content: "";
+    height: 21px;
+    border: 1px solid $light-grey;
+    transform: rotate(45deg);
+  }
+  &:after {
+    position: absolute;
+    top: 7px;
+    left: 17px;
+    content: "";
+    height: 21px;
+    border: 1px solid $light-grey;
+    transform: rotate(-45deg);
+  }
+}
