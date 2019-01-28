@@ -60,90 +60,77 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 356);
+/******/ 	return __webpack_require__(__webpack_require__.s = 355);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 356:
+/***/ 355:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(357);
+module.exports = __webpack_require__(356);
 
 
 /***/ }),
 
-/***/ 357:
+/***/ 356:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(358);
+__webpack_require__(357);
 
-__webpack_require__(359);
+var _sidebar = __webpack_require__(42);
+
+var _sidebar2 = _interopRequireDefault(_sidebar);
+
+var _notification = __webpack_require__(43);
+
+var _notification2 = _interopRequireDefault(_notification);
+
+var _filter = __webpack_require__(358);
+
+var _filter2 = _interopRequireDefault(_filter);
+
+var _nxtLesson = __webpack_require__(359);
+
+var _nxtLesson2 = _interopRequireDefault(_nxtLesson);
+
+var _balance = __webpack_require__(360);
+
+var _balance2 = _interopRequireDefault(_balance);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _sidebar2.default)();
+
+var notificationBtn = document.querySelector('.header__notification');
+(0, _notification2.default)(notificationBtn);
+
+var filter = document.querySelector('.prev-lesson__dropdown-filter');
+(0, _filter2.default)(filter);
+
+var nxtLessonItems = document.querySelectorAll('.nxt-lesson__item');
+for (var i = 0; i < nxtLessonItems.length; i++) {
+    (0, _nxtLesson2.default)(nxtLessonItems[i]);
+}
+
+var balanceChart = document.querySelectorAll('.balance__chart');
+for (var _i = 0; _i < balanceChart.length; _i++) {
+    (0, _balance2.default)(balanceChart[_i]);
+}
 
 /***/ }),
 
-/***/ 358:
+/***/ 357:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 359:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _notificationMenu = __webpack_require__(360);
-
-var _filterMenu = __webpack_require__(361);
-
-var _balanceMenu = __webpack_require__(362);
-
-var _sidebarMenu = __webpack_require__(363);
-
-(0, _sidebarMenu.sidebarMenu)();
-
-var notificationBtn = document.querySelector('.header__notification');
-(0, _notificationMenu.notificationMenu)(notificationBtn);
-
-var fitlerAllScreen = document.querySelector('.previous-lesson__filter');
-var fitlerXsScreen = document.querySelector('.previous-lesson__filter_xs');
-(0, _filterMenu.filterMenu)(fitlerAllScreen);
-(0, _filterMenu.filterMenu)(fitlerXsScreen);
-
-var balanceDiagram = document.querySelectorAll('.balance__diagram');
-for (var i = 0; i < balanceDiagram.length; i++) {
-    (0, _balanceMenu.balanceMenu)(balanceDiagram[i]);
-}
-
-//next lesson open options
-var lessonOption = document.querySelectorAll('.scheduled-lesson__options');
-var lessonAction = document.querySelectorAll('.next-lesson__action');
-
-var _loop = function _loop(_i) {
-    lessonOption[_i].addEventListener('click', function (event) {
-        event.target.classList.toggle('scheduled-lesson__options_opened');
-        lessonAction[_i].classList.toggle('next-lesson__action_opened');
-    });
-};
-
-for (var _i = 0; _i < lessonOption.length; _i++) {
-    _loop(_i);
-}
-
-var sidebarElement = document.querySelector('.wrapper-sidebar');
-window.addEventListener("orientationchange", function () {
-    if (sidebarElement.classList.contains('wrapper-sidebar_opened')) sidebarElement.style.transition = 'none';
-});
-
-/***/ }),
-
-/***/ 360:
+/***/ 358:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -152,26 +139,7 @@ window.addEventListener("orientationchange", function () {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.notificationMenu = notificationMenu;
-function notificationMenu(notificationBtn) {
-    var notification = notificationBtn.querySelector('.notification__conteiner');
-    notificationBtn.addEventListener('click', function () {
-        notification.classList.toggle('notification__conteiner_opened');
-    });
-}
-
-/***/ }),
-
-/***/ 361:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.filterMenu = filterMenu;
+exports.default = filterMenu;
 function filterMenu(targetFilter) {
     var toggle = targetFilter.querySelector('.selected-item');
     var items = targetFilter.querySelector('.items');
@@ -190,21 +158,21 @@ function filterMenu(targetFilter) {
     toggle.addEventListener('click', function (event) {
         event.stopPropagation();
         items.classList.toggle('items_hidden');
-        event.target.classList.toggle('select-arrow-active');
+        event.target.classList.toggle('selected-item_opened');
     });
 
     document.addEventListener('click', closeSelectItems);
     document.addEventListener('touchstart', closeSelectItems);
 
     function closeSelectItems() {
-        toggle.classList.remove('select-arrow-active');
+        toggle.classList.remove('selected-item_opened');
         items.classList.add('items_hidden');
     }
 }
 
 /***/ }),
 
-/***/ 362:
+/***/ 359:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -213,9 +181,28 @@ function filterMenu(targetFilter) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.balanceMenu = balanceMenu;
-function balanceMenu(balanceDiagram) {
-    var progressValue = balanceDiagram.querySelector('.progress-bar__value');
+exports.default = nxtLesson;
+function nxtLesson(nxtLessonItem) {
+    var toggle = nxtLessonItem.querySelector('.toggle');
+    toggle.addEventListener('click', function () {
+        nxtLessonItem.classList.toggle('nxt-lesson__item_opened');
+    });
+}
+
+/***/ }),
+
+/***/ 360:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = balance;
+function balance(balanceChart) {
+    var progressValue = balanceChart.querySelector('.st1');
 
     var RADIUS = 60;
     var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
@@ -232,7 +219,7 @@ function balanceMenu(balanceDiagram) {
 
 /***/ }),
 
-/***/ 363:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -241,26 +228,45 @@ function balanceMenu(balanceDiagram) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.sidebarMenu = sidebarMenu;
-function sidebarMenu() {
+exports.default = sidebar;
+function sidebar() {
     var sidebarToggle = document.querySelector('.sidebar__toggle');
-    var sidebar = document.querySelector('.wrapper-sidebar');
-    var content = document.querySelector('.wrapper__content');
+    var sidebar = document.querySelector('.sidebar');
+    var content = document.querySelector('.content-container');
 
     sidebarToggle.addEventListener('click', function () {
-        sidebar.classList.toggle('wrapper-sidebar_opened');
-        content.classList.toggle('wrapper__content_hidden');
+        sidebar.classList.toggle('sidebar_opened');
+        content.classList.toggle('content-container_hidden');
     });
 
     document.addEventListener('click', closeSidebar);
     document.addEventListener('touchstart', closeSidebar);
 
     function closeSidebar() {
-        if (event.target.classList.contains('wrapper-sidebar_opened')) {
-            sidebar.classList.remove('wrapper-sidebar_opened');
-            content.classList.remove('wrapper__content_hidden');
+        if (event.target.classList.contains('wrapper')) {
+            sidebar.classList.remove('sidebar_opened');
+            content.classList.remove('content-container_hidden');
         }
     }
+}
+
+/***/ }),
+
+/***/ 43:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = notification;
+function notification(notificationBtn) {
+    var notification = notificationBtn.querySelector('.notification__container');
+    notificationBtn.addEventListener('click', function () {
+        notification.classList.toggle('notification__container_opened');
+    });
 }
 
 /***/ })

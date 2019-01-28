@@ -60,78 +60,112 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 364);
+/******/ 	return __webpack_require__(__webpack_require__.s = 361);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 364:
+/***/ 361:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(365);
+module.exports = __webpack_require__(362);
 
 
 /***/ }),
 
-/***/ 365:
+/***/ 362:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(366);
+__webpack_require__(363);
 
-var _notification = __webpack_require__(367);
+var _notification = __webpack_require__(43);
 
 var _notification2 = _interopRequireDefault(_notification);
 
+var _sidebar = __webpack_require__(42);
+
+var _sidebar2 = _interopRequireDefault(_sidebar);
+
+var _category = __webpack_require__(364);
+
+var _category2 = _interopRequireDefault(_category);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import sidebar from '../common/scripts/sidebar';
-
-// sidebar();
-
-
-// export default function sidebar() {
-var sidebarToggle = document.querySelector('.sidebar__toggle');
-var sidebar = document.querySelector('.sidebar');
-var content = document.querySelector('.content-container');
-
-sidebarToggle.addEventListener('click', function () {
-    sidebar.classList.toggle('sidebar_opened');
-    content.classList.toggle('content-container_hidden');
-});
-
-document.addEventListener('click', closeSidebar);
-document.addEventListener('touchstart', closeSidebar);
-
-function closeSidebar() {
-    if (event.target.classList.contains('wrapper')) {
-        sidebar.classList.remove('sidebar_opened');
-        content.classList.remove('content-container_hidden');
-    }
-}
 
 var notificationBtn = document.querySelector('.header__notification');
 (0, _notification2.default)(notificationBtn);
 
+(0, _sidebar2.default)();
+
 var categoriesBlocks = document.querySelectorAll('.main__category-block');
-for (var i = 0; i < categoriesBlocks.length; i++) {
-    categoriesBlocks[i].addEventListener('click', function () {
-        event.target.parentNode.classList.toggle('main__category-block_opened');
-    });
-}
+(0, _category2.default)(categoriesBlocks);
 
 /***/ }),
 
-/***/ 366:
+/***/ 363:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 367:
+/***/ 364:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = categoryMenu;
+function categoryMenu(categories) {
+    for (var i = 0; i < categories.length; i++) {
+        categories[i].addEventListener('click', function () {
+            event.target.parentNode.classList.toggle('main__category-block_opened');
+        });
+    }
+}
+
+/***/ }),
+
+/***/ 42:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = sidebar;
+function sidebar() {
+    var sidebarToggle = document.querySelector('.sidebar__toggle');
+    var sidebar = document.querySelector('.sidebar');
+    var content = document.querySelector('.content-container');
+
+    sidebarToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('sidebar_opened');
+        content.classList.toggle('content-container_hidden');
+    });
+
+    document.addEventListener('click', closeSidebar);
+    document.addEventListener('touchstart', closeSidebar);
+
+    function closeSidebar() {
+        if (event.target.classList.contains('wrapper')) {
+            sidebar.classList.remove('sidebar_opened');
+            content.classList.remove('content-container_hidden');
+        }
+    }
+}
+
+/***/ }),
+
+/***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
