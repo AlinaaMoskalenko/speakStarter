@@ -1,0 +1,66 @@
+.balance {
+  &__card {
+    width: 100%;
+    margin-top: $block-margin;
+    padding: 25px 0;
+    @include flex-column-align-center;
+    background-color: $bg-white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+  &__chart-block {
+    @include flex-center-center;
+  }
+  &__chart {
+    width: 126px;
+    height: 126px;
+    margin-bottom: 30px;
+    position: relative;
+    .st0 {
+      fill: none;
+      stroke: #e6e6e6;
+      stroke-width: 6;
+    }
+    .st1 {
+      fill: none;
+      stroke: url(#SVGID_1_);
+      stroke-width: 6;
+      stroke-linecap: round;
+      @include md{
+        stroke: url(#SVGID_2_);
+      }
+    }
+    .chart {
+      &__progress-bar {
+        transform: rotate(-90deg);
+      }
+      &__info {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        & > div {
+          text-align: center;
+          &:first-child {
+            font-size: 2rem;
+          }
+          &:last-child {
+            font-size: 1.43rem;
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 141px;
+    padding: 14px 0;
+    border: 1px solid $main-green;
+    background-color: transparent;
+    border-radius: $border-radius;
+    color: $main-green;
+    font-size: 1.07rem;
+    &:hover {
+      background-color: $bg-light-green;
+    }
+  }
+}
