@@ -1,11 +1,15 @@
 import './admin_panel.scss';
 import sidebar from '../common/scripts/sidebar';
 import notification from '../common/scripts/notification';
+import filterMenu from './scripts/filter';
 
 sidebar();
 
 const notificationBtn = document.querySelector('.header__notification');
 notification(notificationBtn);
+
+const filter = document.querySelector('.transaction__dropdown-filter');
+filterMenu(filter);
 
 
 

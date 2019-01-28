@@ -1,8 +1,5 @@
 @import "../common/styles.scss";
-// @import "./styles/main/main.scss";
-// @import "./styles/main/transaction/transaction.scss";
-// @import "./styles/main/transaction/filter.scss";
-// @import "./styles/main/transaction/table.scss";
-// @import "./styles/main/transaction/pagination.scss";
-// @import "./styles/main/new-transaction.scss";
-// @import "./styles/animation.scss";
+@import "./styles/main.scss";
+@import "./styles/pagination.scss";
+@import "./styles/table.scss";
+@import "./styles/transaction.scss";

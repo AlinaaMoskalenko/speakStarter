@@ -1,0 +1,35 @@
+$new-transaction-width: 370px;
+
+.main {
+  &__content {
+    &:first-child {
+      flex-basis: 62%;
+      margin-right: calc(#{$main-block-padding} - 10px);
+      @include md {
+        width: 90%;
+        margin-right: 0;
+        margin: 20px 0;
+      }
+      @include sm {
+        width: 100%;
+      }
+    }
+    &:last-child {
+      width: $new-transaction-width;
+      @include md- {
+        width: 90%;
+      }
+      @include sm- {
+        width: 100%;
+      }
+      @include xs {
+        width: 100%;
+      }
+      .main__content-block:last-child {
+        @include md {
+          display: none;
+        }
+      }
+    }
+  }
+}

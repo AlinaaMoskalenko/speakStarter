@@ -1,0 +1,106 @@
+$filter-width: 190px;
+
+.transaction {
+  &__header-block {
+    @include flex-center-between;
+    height: 41px;
+  }
+  &__filters {
+    display: flex;
+  }
+  &__dropdown-filter {
+    position: relative;
+    width: $filter-width;
+    margin-right: 7px;
+    .selected-item {
+      border: 1px solid $blue;
+      border-radius: $border-radius;
+      position: relative;
+      color: $grey;
+      cursor: pointer;
+      white-space: nowrap;
+      padding: 11px 30px 11px 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:after {
+        position: absolute;
+        content: "";
+        right: 10px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $blue;
+        border-left: none;
+        border-top: none;
+        transform: rotate(45deg);
+      }
+      &_opened {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        &:after {
+          top: 12px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    .items {
+      border: 1px solid $blue;
+      border-top: none;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      cursor: pointer;
+      position: absolute;
+      width: 100%;
+      background-color: $bg-white;
+      z-index: 1;
+      & div {
+        padding: 5px 12px;
+        color: $grey;
+        &:hover {
+          color: #ffffff;
+          background-color: $blue;
+        }
+      }
+      &_hidden {
+        display: none;
+      }
+    }
+  }
+  &__select-date {
+    position: relative;
+    width: $filter-width;
+    .selected-item {
+      border: 1px solid $blue;
+      border-radius: $border-radius;
+      position: relative;
+      color: $grey;
+      cursor: pointer;
+      white-space: nowrap;
+      padding: 11px 40px 11px 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &__calendar {
+        position: absolute;
+        top: 7px;
+        right: 12px;
+        width: 25px;
+        height: 25px;
+        background: url("../../assets/img/calendar/calendar.svg") no-repeat;
+        background-size: contain;
+        & > span {
+          position: absolute;
+          top: 62%;
+          left: 47%;
+          transform: translate(-50%, -50%);
+          font-size: 0.79rem;
+        }
+      }
+    }
+  }
+  &__table-block {
+    margin-top: 12px;
+  }
+  &__pagination-block {
+    margin-top: 12px;
+    @include flex-center-center;
+  }
+}
