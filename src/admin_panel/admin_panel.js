@@ -9,30 +9,8 @@ const notificationBtn = document.querySelector('.header__notification');
 notification(notificationBtn);
 
 const filter = document.querySelector('.transaction__dropdown-filter');
+const filter_1 = document.querySelector('.new-transaction__select-user');
+const filter_2 = document.querySelector('.new-transaction__select-currency');
 filterMenu(filter);
-
-
-
-//filter
-// const toggle = document.querySelector('.selected-item');
-// const items = document.querySelector('.items');
-
-// for (let i = 0; i < items.children.length; i++) {
-//     items.children[i].addEventListener('click', (event) => {
-//         toggle.textContent = event.target.textContent;
-//         closeSelectItems();
-//     });
-// }
-
-// toggle.addEventListener('click', function (event) {
-//     event.stopPropagation();
-//     items.classList.toggle('items_hidden');
-//     event.target.classList.toggle('select-arrow-active');
-// });
-
-// document.addEventListener('click', closeSelectItems);
-
-// function closeSelectItems() {
-//     toggle.classList.remove('select-arrow-active');
-//     items.classList.add('items_hidden');
-// }
+filterMenu(filter_1);
+filterMenu(filter_2);

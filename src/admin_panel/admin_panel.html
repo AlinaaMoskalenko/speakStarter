@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin panel</title>
+    <title>Admin page</title>
 </head>
 
 <body>
@@ -264,37 +264,66 @@
                         <div class="page-toggle-arrow page-toggle-arrow_active right"></div>
                     </div>
                 </div>
-                <div class="main__content"></div>
-                            <!--<div class="main__new-transaction">
-                                <div class="new-transaction__title-block">
-                                    <div class="main__title">Зарегистрировать транзакцию</div>
-            
+                <div class="main__content">
+                    <h1>Зарегистрировать транзакцию</h1>
+                    <form class="new-transaction__form">
+                        <div>
+                            <div class="new-transaction__select-user">
+                                <div class="selected-item">Кем выполнена транзакция</div>
+                                <div class="items items_hidden">
+                                    <div>Кем выполнена транзакция</div>
+                                    <div>Юрий</div>
+                                    <div>Андрей</div>
+                                    <div>Сергей</div>
+                                    <div>Павел</div>
                                 </div>
-                                <form class="new-transaction__form">
-                                    <div class="new-transaction__select-user">
-                                        <div class="selected-item">Кем выполнена транзакция</div>
-                                        <div class="items items_hidden">
-                                            <div>Юрий</div>
-                                            <div>Андрей</div>
-                                            <div>Сергей</div>
-                                            <div>Павел</div>
-                                        </div>
-                                    </div>
-                                    <input type="text" class="new-transaction__amount-cash" placeholder ="Сумма">
-                                    <div class="new-transaction__select-currency">
-                                            <div class="selected-item">EUR</div>
-                                            <div class="items items_hidden">
-                                                <div>CHF</div>
-                                                <div>USD</div>
-                                                <div>UAH</div>
-                                                <div>RUR</div>
-                                            </div>
-                                        </div>
-                                    <input type="text" class="new-transaction__amount-lessons" placeholder="Количество уроков">
-                                    <textarea class="new-transaction__comment" placeholder="Комментарий"></textarea>
-                                    <button class="new-transaction__add" type="submit">Зарегистрировать</button>
-                                </form>
-                            </div> -->
+                            </div>
+                            <div class="data-error">Выберите кем выполнена транзакция</div>
+                        </div>
+                        <div class="new-transaction_failed">
+                            <input type="text" class="new-transaction__amount-cash" placeholder="Сумма" onfocus="this.placeholder=''"
+                                onblur="this.placeholder='Сумма'">
+                            <div class="data-error">Введите сумму</div>
+                        </div>
+                        <div>
+                            <div class="new-transaction__select-currency">
+                                <div class="selected-item">EUR</div>
+                                <div class="items items_hidden">
+                                    <div>EUR</div>
+                                    <div>CHF</div>
+                                    <div>USD</div>
+                                    <div>UAH</div>
+                                    <div>RUR</div>
+                                </div>
+                            </div>
+                            <div class="data-error">Укажите валюту</div>
+                        </div>
+                        <div>
+                            <input type="text" class="new-transaction__amount-lessons" placeholder="Количество уроков"
+                                onfocus="this.placeholder=''" onblur="this.placeholder='Количество уроков'">
+                            <div class="data-error">Введите количество уроков</div>
+                        </div>
+                        <div>
+                            <textarea class="new-transaction__comment" placeholder="Комментарий" onfocus="this.placeholder=''"
+                                onblur="this.placeholder='Комментарий'"></textarea>
+                            <div class="data-error">Введите комментарий</div>
+                        </div>
+                        <div> <!--+ class = "new-transaction_failed"-->
+                            <button class="new-transaction__add-btn" type="submit">Зарегистрировать</button>
+                            <div class="new-transaction_loading">
+                                <div>
+                                    <div class="transaction-spinner"></div>
+                                    <span>транзакция обрабатывается</span>
+                                </div>
+                                <div>
+                                    <div class="data-error server-error"></div>
+                                    <span>ошибка на сервере</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
             </main>
         </div>
     </div>

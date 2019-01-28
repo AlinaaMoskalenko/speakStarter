@@ -1,0 +1,197 @@
+.new-transaction {
+  &__form {
+    margin-top: 12px;
+    padding: 30px 36px;
+    @include flex-column-center-between;
+    background-color: $bg-white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    & > div {
+      width: 100%;
+    }
+  }
+  &__amount-cash,
+  &__amount-lessons,
+  &__comment {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $light-grey;
+    border-radius: $border-radius;
+    color: $grey;
+    &::placeholder {
+      color: $grey;
+    }
+  }
+  &__amount-cash,
+  &__amount-lessons {
+    margin-bottom: 7px;
+    &:focus {
+      border-color: $light-green;
+    }
+  }
+  &__select-user,
+  &__select-currency {
+    position: relative;
+    width: 100%;
+    margin-bottom: 7px;
+    .selected-item {
+      border: 1px solid $light-grey;
+      border-radius: $border-radius;
+      position: relative;
+      color: $grey;
+      cursor: pointer;
+      white-space: nowrap;
+      padding: 12px;
+      padding-right: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:after {
+        position: absolute;
+        content: "";
+        right: 10px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $light-green;
+        border-left: none;
+        border-top: none;
+        transform: rotate(45deg);
+      }
+      &_opened {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border: 1px solid $light-green;
+        &:after {
+          top: 19px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    .items {
+      border: 1px solid $light-green;
+      border-top: none;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      cursor: pointer;
+      position: absolute;
+      width: 100%;
+      background-color: $bg-white;
+      z-index: 1;
+      & div {
+        padding: 5px 12px;
+        color: $grey;
+        &:hover {
+          color: #ffffff;
+          background-color: $light-green;
+        }
+      }
+      &_hidden {
+        display: none;
+      }
+    }
+    // @include xl- {
+    //   display: block;
+    // }
+    // @include lg- {
+    //   display: block;
+    // }
+    // @include xs {
+    //   margin-top: 12px;
+    //   align-self: flex-end;
+    // }
+  }
+  &__comment {
+    height: 143px;
+    outline-color: $light-green;
+    font-family: $font-stack;
+    font-size: 1rem;
+    color: $grey;
+  }
+  &__add-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.14rem;
+    border: 1px solid $main-green;
+    border-radius: $border-radius;
+    color: $main-green;
+    background-color: transparent;
+    &:hover {
+      background-color: $bg-light-green;
+    }
+    &:before {
+      content: "+";
+      margin-right: 3px;
+    }
+  }
+  &_failed {
+    & > input,
+    & > textarea,
+    & > div:first-child > div {
+      border: 1.5px solid $main-orange;
+      margin-bottom: 0;
+      &:after {
+        border-color: $main-orange;
+      }
+    }
+    .data-error,
+    .data-error.server-error {
+      display: block;
+    }
+    .data-error.server-error {
+      width: 15px;
+      height: 15px;
+      background: url("../../assets/img/data-error-icon/exclamation-mark.svg")
+        no-repeat;
+    }
+    .new-transaction_loading {
+      & > div {
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: flex;
+        }
+      }
+    }
+  }
+  &_loading {
+    margin-top: 7px;
+    & > div {
+      @include flex-center-center;
+      & > span {
+        color: $grey;
+        margin-left: 5px;
+      }
+      &:last-child {
+        display: none;
+        & > span {
+          color: $main-orange;
+        }
+      }
+    }
+  }
+}
+
+.data-error {
+  margin: 5px 0;
+  color: $main-orange;
+  font-size: 0.86rem;
+  display: none;
+}
+
+.transaction-spinner {
+  width: 20px;
+  height: 20px;
+  background: url("../../assets/img/spinner/transaction-spinner.svg") no-repeat;
+  background-size: contain;
+  animation: spinner-animation 2s infinite linear;
+}
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
