@@ -12,14 +12,14 @@ const baseConf = (_path) => {
         index: ['babel-polyfill', './src/index/index.js'],
         'pop-up-cancel': ['./src/pop-up-cancel/pop-up-cancel.js'],
         'pop-up-cancel-2': ['./src/pop-up-cancel-2/pop-up-cancel-2.js'],
-        'pop-up-notification': ['./src/pop-up-notification/pop-up-notification.js'],
         'pop-up-reschedule': ['./src/pop-up-reschedule/pop-up-reschedule.js'],
         'pop-up-reschedule-main': ['./src/pop-up-reschedule-main/pop-up-reschedule-main.js'],
         'pop-up-appoint': ['./src/pop-up-appoint/pop-up-appoint.js'],
         admin_panel: ['./src/admin_panel/admin_panel.js'],
         student_page: ['./src/student_page/student_page.js'],
         exercises_page1: ['./src/exercises_page1/exercises_page1.js'],
-        login_page: ['./src/login_page/login_page.js'],
+        authorization: ['./src/authorization/authorization.js'],
+        spinner: ['./src/spinner/spinner.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
