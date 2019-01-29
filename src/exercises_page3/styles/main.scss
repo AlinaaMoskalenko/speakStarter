@@ -69,6 +69,14 @@
   }
 }
 
+.exercise {
+  padding: 35px 0;
+  border-bottom: 1px solid $light-grey;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
 .task {
   font-size: 1.14rem;
   margin-bottom: 5px;

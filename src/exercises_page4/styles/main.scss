@@ -1,0 +1,229 @@
+.main {
+  &__container {
+    flex-basis: 85%;
+    @include xl- {
+      flex-basis: 95%;
+    }
+    @include lg {
+      flex-basis: 100%;
+    }
+  }
+  &__header-block {
+    @include flex-align-center-wrap;
+    & > h1 {
+      position: relative;
+      padding-right: 20px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        border: 2px solid $grey;
+        border-left: none;
+        border-bottom: none;
+        transform: rotate(45deg) translateY(-50%);
+      }
+    }
+  }
+  &__subcategory-title-block {
+    margin-bottom: 10px;
+    & > p {
+      margin-top: 2px;
+      color: $grey;
+    }
+  }
+  &__exercises-block {
+    margin-top: calc(#{$block-margin} - 10px);
+    background-color: $bg-white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 25px 30px 15px 30px;
+    & > div > h2 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $light-grey;
+      @include xs {
+        font-size: 1.21rem;
+      }
+    }
+    ol {
+      margin-top: 25px;
+    }
+  }
+
+  &__result-block {
+    padding: 35px 0;
+    @include xs-- {
+      @include flex-column-align-center;
+    }
+  }
+  &__result {
+    @include flex-center-between;
+    max-width: 270px;
+    width: 100%;
+    & > span {
+      font-size: 1.43rem;
+    }
+    @include xs-- {
+      flex-direction: column;
+    }
+    .result-stars {
+      min-width: 100px;
+      @include flex-justify-between;
+      & > i {
+        color: $main-orange;
+      }
+      @include xs-- {
+        margin: 5px 0;
+      }
+    }
+  }
+  &__description {
+    margin-top: 10px;
+    color: $grey;
+    font-size: 1.21rem;
+    & > span {
+      color: $primary;
+    }
+    @include xs-- {
+      text-align: center;
+    }
+  }
+  &__btn-block {
+    margin-top: 40px;
+    @include sm {
+      @include flex-justify-center-wrap;
+    }
+    @include xs {
+      margin-top: 20px;
+    }
+  }
+  &__btn {
+    font-size: 1.14rem;
+    border: 1px solid $main-green;
+    border-radius: $border-radius;
+    background-color: transparent;
+    color: $main-green;
+    padding: 10px 25px;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+    &:hover {
+      background-color: $bg-light-green;
+    }
+    &:first-child {
+      margin-right: 10px;
+      max-width: 360px;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 48%;
+        left: 32px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $main-green;
+        border-top: none;
+        border-right: none;
+        transform: rotate(45deg) translateY(-50%);
+      }
+      @include xs {
+        margin-right: 0;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 20px;
+        &:before {
+          left: 4%;
+        }
+      }
+    }
+    &:last-child {
+      max-width: 200px;
+      &:before {
+        position: absolute;
+        content: url("../../assets/img/exercises/back-arrow.svg");
+        width: 20px;
+        height: 20px;
+        left: 20px;
+      }
+      @include xs-- {
+        &:before {
+          left: 5%;
+        }
+      }
+    }
+  }
+}
+
+.exercise {
+  padding: 35px 0;
+  border-bottom: 1px solid $light-grey;
+  &__block {
+    display: flex;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .state-icon {
+      margin-right: 10px;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: relative;
+    }
+    &_answer-false {
+      .state-icon {
+        background-color: $main-orange;
+        &:before {
+          content: url("../../assets/img/exercises/cross.svg");
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: 2px;
+          left: 5px;
+        }
+      }
+      .task__answer {
+        color: $main-orange;
+      }
+    }
+    &_answer-true {
+      .state-icon {
+        background-color: $green;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 8px;
+          top: 4px;
+          height: 8px;
+          width: 4px;
+          border: solid #ffffff;
+          border-width: 0 1px 1px 0;
+          transform: rotate(45deg);
+        }
+      }
+      .task__answer {
+        color: $green;
+      }
+    }
+  }
+}
+
+.task {
+  font-size: 1.14rem;
+  margin-left: 20px;
+  width: 100%;
+  align-self: center;
+  @include xs {
+    font-size: 1.07rem;
+  }
+  &__text {
+    @include flex-align-center-wrap;
+  }
+  &__answer {
+    margin: 0 5px;
+  }
+}

@@ -1,5 +1,6 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 @import "../../assets/icons/style.css";
+@import "../../assets/icons/styles_1.css";
 @import "./styles/fonts/fonts.scss";
 @import "./styles/colors.scss";
 @import "./styles/variables.scss";
@@ -10,6 +11,7 @@
 @import "./styles/notification.scss";
 @import "./styles/content-container.scss";
 
-.far, .fas {
+.far,
+.fas {
   font-family: "Font Awesome 5 Free" !important;
 }
