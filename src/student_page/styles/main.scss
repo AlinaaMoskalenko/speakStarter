@@ -51,6 +51,10 @@ $nxt-and-balance-width: 254px;
     }
   }
   &__content-block {
+    & > h1 {
+      @include flex-align-center;
+      height: 41px;
+    }
     @include md {
       @include flex-column-align-center;
       & > h1 {

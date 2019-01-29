@@ -1,8 +1,10 @@
 .prev-lesson {
   &__header-block {
-    @include flex-justify-between;
+    @include flex-center-between;
+    min-height: 41px;
     @include xs {
       @include flex-column;
+      align-items: flex-start;
     }
   }
   &__dropdown-filter {
@@ -16,7 +18,7 @@
       color: $grey;
       cursor: pointer;
       white-space: nowrap;
-      padding: 6px 30px 6px 12px;
+      padding: 11px 30px 11px 12px;
       overflow: hidden;
       text-overflow: ellipsis;
       &:after {
