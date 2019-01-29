@@ -65,7 +65,7 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 22:
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -98,7 +98,7 @@ function sidebar() {
 
 /***/ }),
 
-/***/ 23:
+/***/ 15:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -133,11 +133,11 @@ module.exports = __webpack_require__(352);
 
 __webpack_require__(353);
 
-var _sidebar = __webpack_require__(22);
+var _sidebar = __webpack_require__(14);
 
 var _sidebar2 = _interopRequireDefault(_sidebar);
 
-var _notification = __webpack_require__(23);
+var _notification = __webpack_require__(15);
 
 var _notification2 = _interopRequireDefault(_notification);
 

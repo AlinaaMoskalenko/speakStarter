@@ -3863,6 +3863,37 @@ i {
   content: "s";
   color: #b6e3a6;
 }@font-face {
+    font-family: 'icon_1';
+    src:  url(./assets/fonts/icon_1.eot);
+    src:  url(./assets/fonts/icon_1.eot#iefix) format('embedded-opentype'),
+      url(./assets/fonts/icon_1.ttf) format('truetype'),
+      url(./assets/fonts/icon_1.woff) format('woff'),
+      url(./assets/images/icon_1.svg#icon_1) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icon_1' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-star_full-fill:before {
+    content: "_";
+  }
+  .icon-star_not-fill:before {
+    content: "f";
+  }@font-face {
   font-family: "MuseoSansCyrl500";
   src: url(./assets/fonts/MuseoSansCyrl_500.otf); }
 
@@ -4252,7 +4283,8 @@ h4 {
         opacity: 0.5;
         pointer-events: none; } }
 
-.far, .fas {
+.far,
+.fas {
   font-family: "Font Awesome 5 Free" !important; }
 
 .main__container {
@@ -4325,6 +4357,12 @@ h4 {
   .main__btn:hover {
     background-color: transparent;
     color: #459551; }
+
+.exercise {
+  padding: 35px 0;
+  border-bottom: 1px solid #e8e8e8; }
+  .exercise:last-child {
+    border-bottom: none; }
 
 .task {
   font-size: 1.14rem;
@@ -4409,9 +4447,3 @@ h4 {
     margin-left: 5px; }
     .task__answer:focus {
       border-color: #999999; }
-
-.exercise {
-  padding: 35px 0;
-  border-bottom: 1px solid #e8e8e8; }
-  .exercise:last-child {
-    border-bottom: none; }
