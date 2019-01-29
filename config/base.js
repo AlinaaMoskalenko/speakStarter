@@ -18,6 +18,7 @@ const baseConf = (_path) => {
         admin_panel: ['./src/admin_panel/admin_panel.js'],
         student_page: ['./src/student_page/student_page.js'],
         exercises_page1: ['./src/exercises_page1/exercises_page1.js'],
+        exercises_page2: ['./src/exercises_page2/exercises_page2.js'],
         authorization: ['./src/authorization/authorization.js'],
         spinner: ['./src/spinner/spinner.js'],
     };

@@ -1,0 +1,50 @@
+.main {
+  &__container {
+    flex-basis: 85%;
+    @include xl- {
+      flex-basis: 95%;
+    }
+    @include lg {
+      flex-basis: 100%;
+    }
+  }
+  &__header-block {
+    @include flex-align-center;
+    & > h1 {
+      position: relative;
+      padding-right: 20px;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        border: 2px solid $grey;
+        border-left: none;
+        border-bottom: none;
+        transform: rotate(45deg) translateY(-50%);
+      }
+    }
+    @include xs-- {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__subcategory-title-block {
+    padding-left: 20px;
+    & > p {
+      margin-top: 2px;
+      color: $grey;
+    }
+    @include xs-- {
+      padding-left: 0;
+      padding-top: 10px;
+    }
+  }
+  &__subcategory {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $block-margin;
+  }
+}

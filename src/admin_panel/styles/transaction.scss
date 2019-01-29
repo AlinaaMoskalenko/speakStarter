@@ -97,10 +97,10 @@ $filter-width: 190px;
     }
   }
   &__table-block {
-    margin-top: 12px;
+    margin-top: $block-margin;
   }
   &__pagination-block {
-    margin-top: 12px;
+    margin-top: $block-margin;
     @include flex-center-center;
   }
 }

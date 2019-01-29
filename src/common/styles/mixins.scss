@@ -5,6 +5,7 @@ $md-screen: 1032px;
 $lg-screen: 1370px;
 
 $xs-: 440px;
+$xs--: 500px;
 $lg-: 1200px;
 $xl-: 1500px;
 
@@ -17,6 +18,12 @@ $xl-: 1500px;
 
 @mixin xs- {
   @media (min-width: #{$xs- - 0.1px}) and (max-width: #{$xs-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin xs-- {
+  @media (max-width: #{$xs-- - 0.1px}) {
     @content;
   }
 }
@@ -150,6 +157,13 @@ $xl-: 1500px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center-between-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 

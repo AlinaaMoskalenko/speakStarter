@@ -1,6 +1,6 @@
 .new-transaction {
   &__form {
-    margin-top: 12px;
+    margin-top: $block-margin;
     padding: 30px 36px;
     @include flex-column-center-between;
     background-color: $bg-white;

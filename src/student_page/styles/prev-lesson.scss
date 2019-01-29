@@ -62,12 +62,12 @@
       }
     }
     @include xs {
-      margin-top: 12px;
+      margin-top: $block-margin;
       align-self: flex-end;
     }
   }
   &__card {
-    margin-top: 12px;
+    margin-top: $block-margin;
     border-radius: $border-radius;
     background-color: $bg-white;
     box-shadow: $box-shadow;
