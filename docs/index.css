@@ -3865,7 +3865,7 @@ i {
 }
 .icon-state__arrow:before {
   content: "s";
-  color: #e56767;
+  color: #b6e3a6;
 }
 @charset "UTF-8";
 @font-face {
@@ -4312,6 +4312,12 @@ h4 {
     @media (max-width: 1031.9px) {
       .main__content:last-child .main__content-block:last-child {
         display: none; } }
+  .main__content-block > h1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 41px; }
   @media (max-width: 1031.9px) {
     .main__content-block {
       display: -ms-flexbox;
@@ -4327,14 +4333,19 @@ h4 {
 .prev-lesson__header-block {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  min-height: 41px; }
   @media (max-width: 575.9px) {
     .prev-lesson__header-block {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
-          flex-direction: column; } }
+          flex-direction: column;
+      -ms-flex-align: start;
+          align-items: flex-start; } }
 
 .prev-lesson__filter {
   display: -ms-flexbox;
@@ -4342,7 +4353,7 @@ h4 {
   .prev-lesson__filter > button {
     border: 1px solid transparent;
     background-color: #ffffff;
-    padding: 0 15px; }
+    padding: 5px 15px; }
     .prev-lesson__filter > button:first-child {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
@@ -4388,7 +4399,7 @@ h4 {
     color: #999999;
     cursor: pointer;
     white-space: nowrap;
-    padding: 6px 30px 6px 12px;
+    padding: 11px 30px 11px 12px;
     overflow: hidden;
     text-overflow: ellipsis; }
     .prev-lesson__dropdown-filter .selected-item:after {
