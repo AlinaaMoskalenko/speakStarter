@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All exercises page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="sidebar__toggle">
+                <div class="toggle__row"></div>
+                <div class="toggle__row"></div>
+                <div class="toggle__row"></div>
+            </div>
+            <div class="sidebar__content">
+                <div class="sidebar__logo"></div>
+                <ul class="sidebar__links">
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Home"></i>
+                            <span class="link__text">Главная</span>
+                        </a>
+                    </li>
+                    <li class="link link_active">
+                        <a href="#" class="link__path">
+                            <i class="icon-Homework"></i>
+                            <span class="link__text">Домашнее задание</span>
+                        </a>
+                        <div class="link__notification">3</div>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Media"></i>
+                            <span class="link__text">Медиа</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Exercises"></i>
+                            <span class="link__text">Упражнения</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Payments"></i>
+                            <span class="link__text">Оплата</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Options"></i>
+                            <span class="link__text">Настройки</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="content-container">
+            <header class="header">
+                <div class="header__user">
+                    <div class="user__photo">
+                        <img src="../../assets/img/header/user_1.png" alt="User photo" class="photo">
+                    </div>
+                    <div class="user__name">Nataliya Sergeevna</div>
+                </div>
+                <div class="header__notification">
+                    <div class="header__notification-icon">
+                        <div class="notification__bell"></div>
+                        <div class="notification__indicator"></div>
+                    </div>
+                    <div class="notification__container">
+                        <div class="notification__caption">Уведомления</div>
+                        <div class="notification">
+                            <div class="notification__details">
+                                <div class="notification__message">
+                                    <div class="notification__state notification__state_new-homework"></div>
+                                    <div class="notification__text">Вам было задано д/з</div>
+                                </div>
+                                <div class="notification__subtitle">25 мин.</div>
+                            </div>
+                            <div class="notification__details">
+                                <div class="notification__message">
+                                    <div class="notification__state notification__state_no-homework"></div>
+                                    <div class="notification__text">Урок перешел в стадию "д/з не задали"</div>
+                                </div>
+                                <div class="notification__subtitle">5 мин.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main__container">
+                    <div class="main__header-block">
+                        <h1>Упражнения</h1>
+                        <h1>Категория</h1>
+                        <div class="main__subcategory-title-block">
+                            <h2>Presens</h2>
+                            <p>Presens - deutche Zeitform fur die Gegenwart</p>
+                        </div>
+                    </div>
+                    <div class="main__exercises-block">
+                        <div>
+                            <h2>Prasens - gemischt</h2>
+                            <div>
+                                <div class="exercise">
+                                    <h3>Mussen wir haben oder sein verwenden? Wahle die richtige Form aus.</h3>
+                                    <ol>
+                                        <li class="task">
+                                            <div class="task__text">
+                                                <span>Er</span>
+                                                <div class="task__dropdown">
+                                                    <div class="selected-item"></div>
+                                                    <div class="items items_hidden">
+                                                        <div>hat</div>
+                                                        <div>ist</div>
+                                                    </div>
+                                                </div>
+                                                <span>klud.</span>
+                                            </div>
+                                        </li>
+                                        <li class="task">
+                                            <div class="task__text">
+                                                <span>Ich</span>
+                                                <div class="task__dropdown">
+                                                    <div class="selected-item"></div>
+                                                    <div class="items items_hidden">
+                                                        <div>habe</div>
+                                                        <div>bin</div>
+                                                    </div>
+                                                </div>
+                                                <span>einen Hud.</span>
+                                            </div>
+                                        </li>
+                                        <li class="task">
+                                            <div class="task__text">
+                                                <span></span>
+                                                <div class="task__dropdown">
+                                                    <div class="selected-item"></div>
+                                                    <div class="items items_hidden">
+                                                        <div>Hast</div>
+                                                        <div>Bist</div>
+                                                    </div>
+                                                </div>
+                                                <span>du Hunger?</span>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="exercise">
+                                    <h3>Mussen wir haben oder sein verwenden? Wahle die richtige Form aus.</h3>
+                                    <ol>
+                                        <li class="task">
+                                            <div class="task__text">
+                                                <span>Das Madchen (gehen)</span>
+                                                <div class="task__answer-block">
+                                                    <div class="task__icon"></div>
+                                                    <input type="text" class="task__answer">
+                                                </div>
+                                                <span>zur Schule.</span>
+                                            </div>
+                                        </li>
+                                        <li class="task">
+                                            <div class="task__text">
+                                                <span>Das Madchen (gehen)</span>
+                                                <div class="task__answer-block">
+                                                    <div class="task__icon"></div>
+                                                    <input type="text" class="task__answer">
+                                                </div>
+                                                <span>zur Schule.</span>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="main__btn">Готово</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

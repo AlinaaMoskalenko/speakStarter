@@ -1,0 +1,162 @@
+.main {
+  &__container {
+    flex-basis: 85%;
+    @include xl- {
+      flex-basis: 95%;
+    }
+    @include lg {
+      flex-basis: 100%;
+    }
+  }
+  &__header-block {
+    @include flex-align-center-wrap;
+    & > h1 {
+      position: relative;
+      padding-right: 20px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        border: 2px solid $grey;
+        border-left: none;
+        border-bottom: none;
+        transform: rotate(45deg) translateY(-50%);
+      }
+    }
+  }
+  &__subcategory-title-block {
+    margin-bottom: 10px;
+    & > p {
+      margin-top: 2px;
+      color: $grey;
+    }
+  }
+  &__exercises-block {
+    margin-top: calc(#{$block-margin} - 10px);
+    background-color: $bg-white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 25px 30px;
+    & > div > h2 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $light-grey;
+      @include xs {
+        font-size: 1.21rem;
+      }
+    }
+    ol {
+      padding-left: 25px;
+      margin-top: 25px;
+    }
+  }
+  &__btn {
+    font-size: 1.14rem;
+    border: 1px solid $main-green;
+    border-radius: $border-radius;
+    background-color: $main-green;
+    color: #ffffff;
+    margin-top: 40px;
+    padding: 10px 25px;
+    &:hover {
+      background-color: transparent;
+      color: $main-green;
+    }
+  }
+}
+
+.task {
+  font-size: 1.14rem;
+  margin-bottom: 5px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include xs {
+    font-size: 1.07rem;
+  }
+  &__text {
+    @include flex-align-center-wrap;
+  }
+  &__dropdown {
+    position: relative;
+    max-width: 80px;
+    width: 100%;
+    margin: 5px;
+    .selected-item {
+      border: 1px solid $light-grey;
+      border-radius: $border-radius;
+      position: relative;
+      cursor: pointer;
+      padding: 6px;
+      padding-right: 20px;
+      font-size: 1.14rem;
+      height: 33px;
+      &:after {
+        position: absolute;
+        content: "";
+        top: 9px;
+        right: 7px;
+        width: 8px;
+        height: 8px;
+        border: 1px solid $grey;
+        border-left: none;
+        border-top: none;
+        transform: rotate(45deg);
+      }
+      &_opened {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        &:after {
+          top: 14px;
+          transform: rotate(-135deg);
+        }
+      }
+      @include xs {
+        font-size: 1.07rem;
+      }
+    }
+    .items {
+      border: 1px solid $light-grey;
+      border-top: none;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      cursor: pointer;
+      position: absolute;
+      width: 100%;
+      background-color: $bg-white;
+      z-index: 1;
+      & div {
+        padding: 5px 12px;
+        &:hover {
+          background-color: $light-grey;
+        }
+      }
+      &_hidden {
+        display: none;
+      }
+    }
+  }
+  &__answer-block {
+    display: flex;
+    margin: 5px;
+  }
+  &__icon {
+    width: 25px;
+    height: 25px;
+    background: url("../../assets/img/exercises/pencil.svg") no-repeat;
+  }
+  &__answer {
+    border: none;
+    border-bottom: 1px solid $light-grey;
+    font-size: 1.14rem;
+    width: 120px;
+    margin-left: 5px;
+    &:focus {
+      border-color: $grey;
+    }
+  }
+}

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 361);
+/******/ 	return __webpack_require__(__webpack_require__.s = 368);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -117,21 +117,21 @@ function notification(notificationBtn) {
 
 /***/ }),
 
-/***/ 361:
+/***/ 368:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(362);
+module.exports = __webpack_require__(369);
 
 
 /***/ }),
 
-/***/ 362:
+/***/ 369:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(363);
+__webpack_require__(370);
 
 var _notification = __webpack_require__(23);
 
@@ -141,9 +141,9 @@ var _sidebar = __webpack_require__(22);
 
 var _sidebar2 = _interopRequireDefault(_sidebar);
 
-var _category = __webpack_require__(364);
+var _filter = __webpack_require__(371);
 
-var _category2 = _interopRequireDefault(_category);
+var _filter2 = _interopRequireDefault(_filter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -152,19 +152,21 @@ var notificationBtn = document.querySelector('.header__notification');
 
 (0, _sidebar2.default)();
 
-var categoriesBlocks = document.querySelectorAll('.main__category-block');
-(0, _category2.default)(categoriesBlocks);
+var filter = document.querySelectorAll('.task__dropdown');
+for (var i = 0; i < filter.length; i++) {
+    (0, _filter2.default)(filter[i]);
+}
 
 /***/ }),
 
-/***/ 363:
+/***/ 370:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 364:
+/***/ 371:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -173,12 +175,34 @@ var categoriesBlocks = document.querySelectorAll('.main__category-block');
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.default = categoryMenu;
-function categoryMenu(categories) {
-    for (var i = 0; i < categories.length; i++) {
-        categories[i].addEventListener('click', function () {
-            event.target.parentNode.classList.toggle('main__category-block_opened');
+exports.default = filterMenu;
+function filterMenu(targetFilter) {
+    var toggle = targetFilter.querySelector('.selected-item');
+    var items = targetFilter.querySelector('.items');
+
+    for (var i = 0; i < items.children.length; i++) {
+        items.children[i].addEventListener('click', function (event) {
+            toggle.textContent = event.target.textContent;
+            closeSelectItems();
         });
+        items.children[i].addEventListener('touchstart', function (event) {
+            toggle.textContent = event.target.textContent;
+            closeSelectItems();
+        });
+    }
+
+    toggle.addEventListener('click', function (event) {
+        event.stopPropagation();
+        items.classList.toggle('items_hidden');
+        event.target.classList.toggle('selected-item_opened');
+    });
+
+    document.addEventListener('click', closeSelectItems);
+    document.addEventListener('touchstart', closeSelectItems);
+
+    function closeSelectItems() {
+        toggle.classList.remove('selected-item_opened');
+        items.classList.add('items_hidden');
     }
 }
 

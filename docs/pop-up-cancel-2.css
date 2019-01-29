@@ -3891,6 +3891,8 @@ h4,
 h5,
 h6,
 ul,
+ol,
+p,
 body {
   margin: 0;
   padding: 0; }
@@ -3909,11 +3911,13 @@ a {
   cursor: pointer; }
 
 li {
-  list-style: none;
   font-size: 1.07rem; }
 
 h1 {
   font-size: 1.79rem; }
+
+h2 {
+  font-size: 1.29rem; }
 
 h3 {
   font-size: 1.14rem; }
@@ -3976,6 +3980,8 @@ h4 {
         flex-direction: column;
     -ms-flex-pack: justify;
         justify-content: space-between; }
+    .sidebar__links > li {
+      list-style: none; }
   @media (max-width: 1369.9px) {
     .sidebar {
       position: absolute;
