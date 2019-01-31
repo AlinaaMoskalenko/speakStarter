@@ -3833,6 +3833,14 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pencil:before {
+  content: "c";
+  color: #999;
+}
+.icon-state__arrow:before {
+  content: "s";
+  color: #b6e3a6;
+}
 .icon-star_full-fill:before {
   content: "_";
 }
@@ -3862,10 +3870,6 @@ i {
 .icon-Payments:before {
   content: "p";
   color: #7f7f7f;
-}
-.icon-state__arrow:before {
-  content: "s";
-  color: #b6e3a6;
 }
 @font-face {
   font-family: "MuseoSansCyrl500";
@@ -4455,6 +4459,10 @@ h4 {
         left: 5px; }
     .exercise__block_answer-false .task__answer {
       color: #ea8862; }
+    .exercise__block_answer-false .fa-info-circle:before {
+      color: #ea8862; }
+    .exercise__block_answer-false .description-info {
+      animation: background-color-false 0.2s; }
     .exercise__block_answer-true .state-icon {
       background-color: #66b074; }
       .exercise__block_answer-true .state-icon:after {
@@ -4470,6 +4478,10 @@ h4 {
             transform: rotate(45deg); }
     .exercise__block_answer-true .task__answer {
       color: #66b074; }
+    .exercise__block_answer-true .fa-info-circle:before {
+      color: #66b074; }
+    .exercise__block_answer-true .description-info {
+      animation: background-color-true 0.2s; }
 
 .task {
   font-size: 1.14rem;
@@ -4481,12 +4493,40 @@ h4 {
   @media (max-width: 575.9px) {
     .task {
       font-size: 1.07rem; } }
-  .task__text {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
   .task__answer {
-    margin: 0 5px; }
+    margin: 0 3px; }
+  .task__answer-description {
+    position: relative;
+    cursor: pointer; }
+    .task__answer-description .description-info {
+      display: none;
+      width: 150px;
+      padding: 10px;
+      position: absolute;
+      right: 8px;
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+      z-index: 1;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px #0000003a;
+      color: #ffffff;
+      font-size: 0.86rem;
+      animation-direction: normal;
+      animation-fill-mode: forwards; }
+      @media (max-width: 575.9px) {
+        .task__answer-description .description-info {
+          width: 120px; } }
+    .task__answer-description:hover .description-info {
+      display: block; }
+
+@keyframes background-color-false {
+  from {
+    background-color: transparent; }
+  to {
+    background-color: #ea8862; } }
+
+@keyframes background-color-true {
+  from {
+    background-color: transparent; }
+  to {
+    background-color: #66b074; } }

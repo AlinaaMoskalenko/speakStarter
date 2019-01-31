@@ -3833,6 +3833,14 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pencil:before {
+  content: "c";
+  color: #999;
+}
+.icon-state__arrow:before {
+  content: "s";
+  color: #b6e3a6;
+}
 .icon-star_full-fill:before {
   content: "_";
 }
@@ -3862,10 +3870,6 @@ i {
 .icon-Payments:before {
   content: "p";
   color: #7f7f7f;
-}
-.icon-state__arrow:before {
-  content: "s";
-  color: #b6e3a6;
 }
 @font-face {
   font-family: "MuseoSansCyrl500";
@@ -4346,18 +4350,12 @@ h4 {
   @media (max-width: 575.9px) {
     .task {
       font-size: 1.07rem; } }
-  .task__text {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
   .task__dropdown {
+    display: inline-block;
     position: relative;
-    max-width: 80px;
-    width: 100%;
-    margin: 5px; }
+    width: 80px;
+    margin: 0 5px;
+    vertical-align: middle; }
     .task__dropdown .selected-item {
       border: 1px solid #e8e8e8;
       border-radius: 5px;
@@ -4405,19 +4403,56 @@ h4 {
           background-color: #e8e8e8; }
       .task__dropdown .items_hidden {
         display: none; }
-  .task__answer-block {
-    display: -ms-flexbox;
-    display: flex;
-    margin: 5px; }
-  .task__icon {
-    width: 25px;
-    height: 25px;
-    background: url(./assets/images/pencil.svg) no-repeat; }
   .task__answer {
+    position: relative; }
+    .task__answer .icon-pencil {
+      display: inline;
+      position: absolute;
+      bottom: 0; }
+    .task__answer .fa-thumbs-up {
+      display: none; }
+      .task__answer .fa-thumbs-up:before {
+        color: #999999; }
+    .task__answer .fa-frown {
+      display: none; }
+      .task__answer .fa-frown:before {
+        color: #999999; }
+    .task__answer_true .icon-pencil {
+      display: none; }
+    .task__answer_true .fa-thumbs-up {
+      display: inline; }
+    .task__answer_true .task__input {
+      margin-left: 0;
+      animation: background-true 1.5s; }
+    .task__answer_false .icon-pencil {
+      display: none; }
+    .task__answer_false .fa-frown {
+      display: inline; }
+    .task__answer_false .task__input {
+      margin-left: 0;
+      animation: background-false 1.5s; }
+  .task__input {
     border: none;
     border-bottom: 1px solid #e8e8e8;
     font-size: 1.14rem;
-    width: 120px;
-    margin-left: 5px; }
-    .task__answer:focus {
+    width: 100px;
+    margin-left: 20px; }
+    .task__input:focus {
       border-color: #999999; }
+
+@keyframes background-true {
+  0% {
+    background-color: transparent; }
+  50% {
+    background-color: #b6e3a6; }
+  100% {
+    background-color: transparent; } }
+
+@keyframes background-false {
+  0% {
+    background-color: transparent; }
+  50% {
+    opacity: 0.5;
+    background-color: #ea8862; }
+  100% {
+    background-color: transparent; } }

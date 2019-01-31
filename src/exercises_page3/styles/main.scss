@@ -86,14 +86,12 @@
   @include xs {
     font-size: 1.07rem;
   }
-  &__text {
-    @include flex-align-center-wrap;
-  }
   &__dropdown {
+    display: inline-block;
     position: relative;
-    max-width: 80px;
-    width: 100%;
-    margin: 5px;
+    width: 80px;
+    margin: 0 5px;
+    vertical-align: middle;
     .selected-item {
       border: 1px solid $light-grey;
       border-radius: $border-radius;
@@ -148,23 +146,83 @@
       }
     }
   }
-  &__answer-block {
-    display: flex;
-    margin: 5px;
-  }
-  &__icon {
-    width: 25px;
-    height: 25px;
-    background: url("../../assets/img/exercises/pencil.svg") no-repeat;
-  }
   &__answer {
+    position: relative;
+    .icon-pencil {
+      display: inline;
+      position: absolute;
+      bottom: 0;
+    }
+    .fa-thumbs-up {
+      display: none;
+      &:before {
+        color: $grey;
+      }
+    }
+    .fa-frown {
+      display: none;
+      &:before {
+        color: $grey;
+      }
+    }
+    &_true {
+      .icon-pencil {
+        display: none;
+      }
+      .fa-thumbs-up {
+        display: inline;
+      }
+      .task__input {
+        margin-left: 0;
+        animation: background-true 1.5s;
+      }
+    }
+    &_false {
+      .icon-pencil {
+        display: none;
+      }
+      .fa-frown {
+        display: inline;
+      }
+      .task__input {
+        margin-left: 0;
+        animation: background-false 1.5s;
+      }
+    }
+  }
+  &__input {
     border: none;
     border-bottom: 1px solid $light-grey;
     font-size: 1.14rem;
-    width: 120px;
-    margin-left: 5px;
+    width: 100px;
+    margin-left: 20px;
     &:focus {
       border-color: $grey;
     }
+  }
+}
+
+@keyframes background-true {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: $light-green;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes background-false {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    opacity: 0.5;
+    background-color: $main-orange;
+  }
+  100% {
+    background-color: transparent;
   }
 }

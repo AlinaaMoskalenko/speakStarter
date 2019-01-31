@@ -1,3 +1,5 @@
+$animation-duration: 0.2s;
+
 .main {
   &__container {
     flex-basis: 85%;
@@ -189,6 +191,12 @@
       .task__answer {
         color: $main-orange;
       }
+      .fa-info-circle:before {
+        color: $main-orange;
+      }
+      .description-info {
+        animation: background-color-false $animation-duration;
+      }
     }
     &_answer-true {
       .state-icon {
@@ -208,6 +216,12 @@
       .task__answer {
         color: $green;
       }
+      .fa-info-circle:before {
+        color: $green;
+      }
+      .description-info {
+        animation: background-color-true $animation-duration;
+      }
     }
   }
 }
@@ -220,10 +234,50 @@
   @include xs {
     font-size: 1.07rem;
   }
-  &__text {
-    @include flex-align-center-wrap;
-  }
   &__answer {
-    margin: 0 5px;
+    margin: 0 3px;
+  }
+  &__answer-description {
+    position: relative;
+    cursor: pointer;
+    .description-info {
+      display: none;
+      width: 150px;
+      padding: 10px;
+      position: absolute;
+      right: 8px;
+      transform: translateX(50%);
+      z-index: 1;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+      color: #ffffff;
+      font-size: 0.86rem;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      @include xs {
+        width: 120px;
+      }
+    }
+    &:hover .description-info {
+      display: block;
+    }
+  }
+}
+
+@keyframes background-color-false {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: $main-orange;
+  }
+}
+
+@keyframes background-color-true {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: $green;
   }
 }
