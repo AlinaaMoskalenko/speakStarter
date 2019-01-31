@@ -148,8 +148,8 @@
   }
   &__answer {
     position: relative;
+    display: inline-block;
     .icon-pencil {
-      display: inline;
       position: absolute;
       bottom: 0;
     }

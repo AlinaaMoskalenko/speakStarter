@@ -4404,9 +4404,9 @@ h4 {
       .task__dropdown .items_hidden {
         display: none; }
   .task__answer {
-    position: relative; }
+    position: relative;
+    display: inline-block; }
     .task__answer .icon-pencil {
-      display: inline;
       position: absolute;
       bottom: 0; }
     .task__answer .fa-thumbs-up {
