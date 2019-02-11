@@ -22,6 +22,7 @@ const baseConf = (_path) => {
         exercises_page3: ['./src/exercises_page3/exercises_page3.js'],
         exercises_page4: ['./src/exercises_page4/exercises_page4.js'],
         authorization: ['./src/authorization/authorization.js'],
+        mobile: ['./src/mobile/mobile.js'],
         spinner: ['./src/spinner/spinner.js'],
     };
 
