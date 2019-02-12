@@ -1,0 +1,21 @@
+.result-block {
+  @include flex-column-center-center;
+  height: 100%;
+  &__answer {
+    text-align: center;
+  }
+}
+
+.result {
+  &__image {
+      width: 70px;
+      height: 70px;
+  }
+  &__sentence {
+    font-size: 2rem;
+    margin-top: 30px;
+    & > span {
+      color: $green;
+    }
+  }
+}

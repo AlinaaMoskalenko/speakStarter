@@ -1,0 +1,14 @@
+.small-device-view {
+  & > li {
+      padding: 5px 0;
+    & > a {
+      display: block;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #454545;
+      &:hover {
+        color: #459551;
+      }
+    }
+  }
+}

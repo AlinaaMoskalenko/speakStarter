@@ -1,0 +1,19 @@
+.sm-and-less-screen {
+  display: none;
+  @include xs{
+    display: block;
+    background-color: $bg-light-green;
+    height: 100vh;
+    padding: 15px;
+  }
+}
+
+.more-than-sm-screen-title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #0000ff;
+  @include xs {
+    display: none;
+  }
+}
