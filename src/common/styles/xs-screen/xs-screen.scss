@@ -1,14 +1,21 @@
-.sm-and-less-screen {
+.xs-screen {
   display: none;
-  @include xs{
+  @include xs {
     display: block;
-    background-color: $bg-light-green;
     height: 100vh;
     padding: 15px;
   }
 }
 
-.more-than-sm-screen-title {
+.xs-screen.perfect-answer {
+  background-color: $bg-light-green;
+}
+
+.xs-screen.bad-answer {
+  background-color: $light-pink; 
+}
+
+.more-than-xs-screen-title {
   margin-top: 20px;
   text-align: center;
   font-size: 1.5rem;

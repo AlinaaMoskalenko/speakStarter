@@ -1,10 +1,8 @@
 .exit-cross {
-  width: 25px;
-  height: 25px;
+  display: block;
   background: url("../../assets/img/mobile/cross.svg") no-repeat;
   background-size: contain;
-  @include xs {
-    width: 20px;
-    height: 20px;
-  }
+  width: 20px;
+  height: 20px;
+
 }

@@ -3,8 +3,6 @@
   padding: 5px 35px 5px 20px;
   color: #ffffff;
   font-size: 1.5rem;
-  border: 2px solid $main-green;
-  background-color: $main-green;
   border-radius: 50px;
   position: relative;
   &:after {
@@ -18,11 +16,28 @@
     right: 18px;
     transform: translateY(-50%) rotate(45deg);
   }
+}
+
+.xs-screen.perfect-answer .next-btn {
+  border: 2px solid $main-green;
+  background-color: $main-green;
   &:hover {
-    background-color: transparent;
     color: $main-green;
+    background-color: transparent;
     &:after {
-        border-color: $main-green;
+      border-color: $main-green;
+    }
+  }
+}
+
+.xs-screen.bad-answer .next-btn {
+  border: 2px solid $pink;
+  background-color: $pink;
+  &:hover {
+    color: $pink;
+    background-color: transparent;
+    &:after {
+      border-color: $pink;
     }
   }
 }

@@ -24,6 +24,7 @@ const baseConf = (_path) => {
         authorization: ['./src/authorization/authorization.js'],
         mobile: ['./src/mobile/mobile.js'],
         perfect_answer: ['./src/perfect_answer/perfect_answer.js'],
+        bad_answer: ['./src/bad_answer/bad_answer.js'],
         spinner: ['./src/spinner/spinner.js'],
     };
 

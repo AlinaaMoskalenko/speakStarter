@@ -60,30 +60,37 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 387);
+/******/ 	return __webpack_require__(__webpack_require__.s = 384);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 387:
+/***/ 384:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(388);
+module.exports = __webpack_require__(385);
 
 
 /***/ }),
 
-/***/ 388:
+/***/ 385:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(389);
+__webpack_require__(386);
+
+var info = document.querySelector('.info-icon');
+var rule = document.querySelector('.rule');
+info.addEventListener('click', function () {
+    info.classList.toggle('animation-icon');
+    rule.classList.toggle('rule_hidden');
+});
 
 /***/ }),
 
-/***/ 389:
+/***/ 386:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
