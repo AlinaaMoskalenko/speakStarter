@@ -22,6 +22,9 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', () => {
         if (counter === 0) {
             inputs[counter].value = buttons[i].textContent;
+            inputs[counter].style.width = (buttons[i].offsetWidth - 20) + 'px'; //padding 20px (padding: 0 20px)
+            inputs[counter].style.minWidth = '70px';
+
             inputs[counter].classList.remove('input_active');
             inputs[counter].autofocus = false;
 
@@ -45,6 +48,9 @@ for (let i = 0; i < buttons.length; i++) {
             }
         } else {
             inputs[counter].value = buttons[i].textContent;
+            inputs[counter].style.width = (buttons[i].offsetWidth - 20) + 'px'; //padding 20px (padding: 0 20px)
+            inputs[counter].style.minWidth = '70px';
+
             inputs[counter].classList.remove('input_active');
             for (let i = 0; i < buttons.length; i++) {
                 buttons[i].classList.add('hidden');

@@ -29,19 +29,20 @@
     border-radius: $border-radius;
     background-color: $light-grey;
     margin-right: 1px;
-    &:last-child {
+    &:last-child{
       margin-right: 0;
     }
   }
-  .progress-item.true {
+  .progress-item.true{
     background-color: $main-green;
   }
-  .progress-item.false {
+  .progress-item.false{
     background-color: $pink;
   }
-  .progress-item.active {
+  .progress-item.active{
     background-color: $light-green;
   }
+
 }
 
 .container {

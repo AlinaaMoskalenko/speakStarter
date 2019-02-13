@@ -28,6 +28,7 @@ const baseConf = (_path) => {
         result: ['./src/result/result.js'],
         simple_sentence: ['./src/simple_sentence/simple_sentence.js'],
         complex_sentence: ['./src/complex_sentence/complex_sentence.js'],
+        empty_sentence: ['./src/empty_sentence/empty_sentence.js'],
         spinner: ['./src/spinner/spinner.js'],
     };
 
