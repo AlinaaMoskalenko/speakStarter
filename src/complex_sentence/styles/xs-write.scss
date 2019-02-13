@@ -29,20 +29,19 @@
     border-radius: $border-radius;
     background-color: $light-grey;
     margin-right: 1px;
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
-  .progress-item.true{
+  .progress-item.true {
     background-color: $main-green;
   }
-  .progress-item.false{
+  .progress-item.false {
     background-color: $pink;
   }
-  .progress-item.active{
+  .progress-item.active {
     background-color: $light-green;
   }
-
 }
 
 .container {
@@ -59,24 +58,26 @@
     width: 70px;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid $blue;
+    border-bottom: 2px solid $primary;
     font-size: 2rem;
     text-align: center;
     border-radius: 0;
     padding: 0;
+    &_active {
+      border-bottom-color: $blue;
+      border-bottom-style: dashed;
+    }
   }
 }
+
 
 .btn-block {
   width: 80%;
   position: absolute;
   bottom: 40px;
   transform: translateY(100%);
-  //когда больше двух кнопок
-  //возможно нужно отдельный класс создать
-  // @include flex-center-center-wrap;
-  @include flex-column-center-center;
   .btn-answer {
+    display: inline-block;
     margin: 10px;
     font-size: 1.5rem;
     color: #ffffff;
@@ -85,7 +86,15 @@
     background-color: $blue;
     padding: 2px 20px;
   }
-  &_hidden {
+  .btn-answer.hidden {
     display: none;
   }
+}
+
+.btn-block.two {
+  @include flex-column-center-center;
+}
+
+.btn-block.more {
+  @include flex-center-center-wrap;
 }
