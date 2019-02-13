@@ -60,30 +60,42 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 390);
+/******/ 	return __webpack_require__(__webpack_require__.s = 387);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 390:
+/***/ 387:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(391);
+module.exports = __webpack_require__(388);
 
 
 /***/ }),
 
-/***/ 391:
+/***/ 388:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(392);
+__webpack_require__(389);
+
+var starsBlock = document.querySelector('.stars-block');
+var counter = 1;
+var timer = setInterval(function () {
+    if (counter === starsBlock.childNodes.length - 2) {
+        clearInterval(timer);
+        starsBlock.nextElementSibling.classList.add('show');
+        starsBlock.parentNode.nextElementSibling.classList.add('result-info_show');
+    }
+    starsBlock.childNodes[counter].classList.add('star-animation');
+    counter += 2;
+}, 500);
 
 /***/ }),
 
-/***/ 392:
+/***/ 389:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

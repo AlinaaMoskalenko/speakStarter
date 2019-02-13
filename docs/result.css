@@ -4393,12 +4393,49 @@ h4 {
 .result-block {
   text-align: center; }
 
-.result__image {
-  width: 80px;
-  height: 80px; }
+.result {
+  font-size: 1.7rem;
+  font-weight: 600; }
+  .result .stars-block {
+    margin: 20px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .result .stars-block > i {
+      -ms-transform: scale(0);
+          transform: scale(0); }
+      .result .stars-block > i.star-animation {
+        -ms-transform: scale(1);
+            transform: scale(1);
+        animation: star-shadow 0.5s linear; }
+      .result .stars-block > i:before {
+        color: #fcc505; }
+    .result .stars-block + span {
+      opacity: 0; }
+      .result .stars-block + span.show {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        opacity: 1; }
 
-.result__sentence {
-  font-size: 2rem;
-  margin-top: 30px; }
-  .result__sentence > span {
-    color: #66b074; }
+.result-info {
+  font-size: 1.2rem;
+  font-weight: inherit;
+  color: #999999;
+  margin-top: 40px;
+  opacity: 0; }
+  .result-info > div > span {
+    color: #454545;
+    font-size: 1.3rem; }
+  .result-info_show {
+    transition-delay: 1s;
+    transition-duration: 0.5s;
+    opacity: 1; }
+
+@keyframes star-shadow {
+  0% {
+    transform: scale(2); }
+  100% {
+    transform: scale(1); } }

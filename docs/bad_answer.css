@@ -4279,6 +4279,9 @@ h4 {
 .xs-screen.bad-answer {
   background-color: rgba(240, 185, 167, 0.2); }
 
+.xs-screen.result {
+  background-color: #edf8ef; }
+
 .more-than-xs-screen-title {
   margin-top: 20px;
   text-align: center;
@@ -4307,13 +4310,16 @@ h4 {
     -ms-transform: translateY(-50%) rotate(45deg);
         transform: translateY(-50%) rotate(45deg); }
 
-.xs-screen.perfect-answer .next-btn {
+.xs-screen.perfect-answer .next-btn,
+.xs-screen.result .next-btn {
   border: 2px solid #459551;
   background-color: #459551; }
-  .xs-screen.perfect-answer .next-btn:hover {
+  .xs-screen.perfect-answer .next-btn:hover,
+  .xs-screen.result .next-btn:hover {
     color: #459551;
     background-color: transparent; }
-    .xs-screen.perfect-answer .next-btn:hover:after {
+    .xs-screen.perfect-answer .next-btn:hover:after,
+    .xs-screen.result .next-btn:hover:after {
       border-color: #459551; }
 
 .xs-screen.bad-answer .next-btn {
@@ -4325,12 +4331,53 @@ h4 {
     .xs-screen.bad-answer .next-btn:hover:after {
       border-color: #f0baa8; }
 
+.xs-screen.result .next-btn {
+  padding: 5px 20px 5px 55px;
+  margin-top: 100px; }
+  .xs-screen.result .next-btn:after {
+    display: none; }
+  .xs-screen.result .next-btn:before {
+    content: "";
+    position: absolute;
+    background: url(./assets/images/back-arrow.svg);
+    width: 25px;
+    height: 25px;
+    left: 20px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%); }
+  .xs-screen.result .next-btn:hover {
+    background-color: transparent; }
+    .xs-screen.result .next-btn:hover:before {
+      background: url(./assets/images/back-arrow-hover.svg); }
+
 .exit-cross {
+  display: block; }
+
+.xs-screen.perfect-answer .exit-cross,
+.xs-screen.bad-answer .exit-cross {
   display: block;
   background: url(./assets/images/cross.svg) no-repeat;
   background-size: contain;
   width: 20px;
   height: 20px; }
+
+.xs-screen.result .exit-cross {
+  color: #459551;
+  position: relative;
+  font-size: 1.2rem;
+  padding-left: 20px; }
+  .xs-screen.result .exit-cross:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #459551;
+    border-left: 2px solid #459551;
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
 
 .container {
   display: -ms-flexbox;
