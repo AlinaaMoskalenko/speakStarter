@@ -1,0 +1,96 @@
+.header-block {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  & > a {
+    position: absolute;
+    left: 0;
+  }
+  .title-block {
+    text-align: center;
+    & > h3 {
+      font-weight: 600;
+    }
+    & > h5 {
+      color: $grey;
+      margin-top: 5px;
+    }
+  }
+}
+
+.progress-block {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  .progress-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 5px;
+    border-radius: $border-radius;
+    background-color: $light-grey;
+    margin-right: 1px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .progress-item.true{
+    background-color: $main-green;
+  }
+  .progress-item.false{
+    background-color: $pink;
+  }
+  .progress-item.active{
+    background-color: $light-green;
+  }
+
+}
+
+.container {
+  @include flex-column-align-center;
+  @include position-absolute-center;
+  width: 100%;
+}
+
+.text-block {
+  font-size: 2rem;
+  text-align: center;
+  width: 80%;
+  .input {
+    width: 70px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $blue;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+.btn-block {
+  // margin-top: 120px;
+  width: 80%;
+
+  position: absolute;
+  bottom: 40px;
+  // left: 50%;
+  transform: translateY(100%);
+
+  //когда больше двух кнопок
+  //возможно нужно отдельный класс создать
+  // @include flex-center-center-wrap;
+
+  @include flex-column-center-center;
+  .btn-answer {
+    margin: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    border: 2px solid $blue;
+    border-radius: 50px;
+    background-color: $blue;
+    padding: 2px 20px;
+  }
+  &_hidden {
+    display: none;
+  }
+}

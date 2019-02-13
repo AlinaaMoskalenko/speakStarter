@@ -60,30 +60,49 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 393);
+/******/ 	return __webpack_require__(__webpack_require__.s = 390);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 393:
+/***/ 390:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(394);
+module.exports = __webpack_require__(391);
 
 
 /***/ }),
 
-/***/ 394:
+/***/ 391:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(395);
+__webpack_require__(392);
+
+var answerButtons = document.querySelector('.btn-block');
+var buttons = answerButtons.querySelectorAll('.btn-answer');
+
+var input = document.querySelector('.input');
+
+var nextExercise = document.querySelector('.next-btn');
+
+var _loop = function _loop(i) {
+    buttons[i].addEventListener('click', function () {
+        input.value = buttons[i].textContent;
+        answerButtons.classList.add('btn-block_hidden');
+        nextExercise.classList.add('next-btn_show');
+    });
+};
+
+for (var i = 0; i < buttons.length; i++) {
+    _loop(i);
+}
 
 /***/ }),
 
-/***/ 395:
+/***/ 392:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

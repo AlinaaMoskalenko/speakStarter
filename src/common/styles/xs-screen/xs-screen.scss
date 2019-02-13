@@ -12,11 +12,15 @@
 }
 
 .xs-screen.bad-answer {
-  background-color: $light-pink; 
+  background-color: $light-pink;
 }
 
-.xs-screen.result{
+.xs-screen.result {
   background-color: $bg-light-green;
+}
+
+.xs-screen.sentence {
+  background-color: $bg-body;
 }
 
 .more-than-xs-screen-title {

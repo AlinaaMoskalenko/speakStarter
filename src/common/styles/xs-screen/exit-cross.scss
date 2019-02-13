@@ -3,12 +3,13 @@
 }
 
 .xs-screen.perfect-answer .exit-cross,
-.xs-screen.bad-answer .exit-cross {
+.xs-screen.bad-answer .exit-cross,
+.xs-screen.sentence .exit-cross {
   display: block;
-  background: url("../../assets/img/mobile/cross.svg") no-repeat;
+  background: url("../../assets/img/mobile/exit-cross.svg") no-repeat;
   background-size: contain;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .xs-screen.result .exit-cross {

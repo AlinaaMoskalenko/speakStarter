@@ -1,10 +1,12 @@
 .container {
   @include flex-column-center-center;
-  height: 100%;
+  @include position-absolute-center;
+  width: 100%;
 }
 
 .result-block {
   text-align: center;
+  width: 80%;
 }
 
 .result {

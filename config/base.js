@@ -26,6 +26,7 @@ const baseConf = (_path) => {
         perfect_answer: ['./src/perfect_answer/perfect_answer.js'],
         bad_answer: ['./src/bad_answer/bad_answer.js'],
         result: ['./src/result/result.js'],
+        simple_sentence: ['./src/simple_sentence/simple_sentence.js'],
         spinner: ['./src/spinner/spinner.js'],
     };
 
