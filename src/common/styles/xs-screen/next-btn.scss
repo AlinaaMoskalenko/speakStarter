@@ -18,7 +18,8 @@
   }
 }
 
-.xs-screen.perfect-answer .next-btn {
+.xs-screen.perfect-answer .next-btn,
+.xs-screen.result .next-btn {
   border: 2px solid $main-green;
   background-color: $main-green;
   &:hover {
@@ -38,6 +39,30 @@
     background-color: transparent;
     &:after {
       border-color: $pink;
+    }
+  }
+}
+
+.xs-screen.result .next-btn {
+  padding: 5px 20px 5px 55px;
+  margin-top: 100px;
+  &:after {
+    display: none;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background: url("../../assets/img/mobile/back-arrow.svg");
+    width: 25px;
+    height: 25px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:hover {
+    background-color: transparent;
+    &:before {
+      background: url("../../assets/img/mobile/back-arrow-hover.svg");
     }
   }
 }

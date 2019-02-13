@@ -1,8 +1,30 @@
 .exit-cross {
   display: block;
+}
+
+.xs-screen.perfect-answer .exit-cross,
+.xs-screen.bad-answer .exit-cross {
+  display: block;
   background: url("../../assets/img/mobile/cross.svg") no-repeat;
   background-size: contain;
   width: 20px;
   height: 20px;
+}
 
+.xs-screen.result .exit-cross {
+  color: $main-green;
+  position: relative;
+  font-size: 1.2rem;
+  padding-left: 20px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid $main-green;
+    border-left: 2px solid $main-green;
+    transform: rotate(45deg);
+  }
 }
