@@ -4380,7 +4380,7 @@ h4 {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0; }
       .prev-lesson__dropdown-filter .selected-item_opened:after {
-        top: 12px;
+        top: 17px;
         -ms-transform: rotate(-135deg);
             transform: rotate(-135deg); }
   .prev-lesson__dropdown-filter .items {
