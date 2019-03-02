@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Setze die Verben im Präsens ein.",
+    "questions": [
+      {
+        "type": "text",
+        "text": "Ich <em>(heißen)</em> Ludwig.",
+        "comment": "Wir entfernen die Endung <em>en</em> und hängen bei der 1. Person Singular <em>e</em> an.",
+        "children": [{ "correctAnswer": "heiße", "pos": 21 }]
+      },
+      {
+        "type": "text",
+        "text": "Ich <em>(kommen)</em> aus Deutschland.",
+        "comment": "Wir entfernen die Endung <em>en</em> und hängen bei der 1. Person Singular <em>e</em> an.",
+        "children": [{ "correctAnswer": "komme", "pos": 21 }]
+      },
+      {
+        "type": "text",
+        "text": "Ich <em>(sein)</em> fünf Jahre alt.",
+        "comment": "<em>Sein</em> hat unregelmäßige Präsensformen.",
+        "children": [{ "correctAnswer": "bin", "pos": 19 }]
+      },
+      {
+        "type": "text",
+        "text": "Ich <em>(haben)</em> einen Bruder.",
+        "comment": "<em>Haben</em> hat unregelmäßige Präsensformen.",
+        "children": [{ "correctAnswer": "habe", "pos": 20 }]
+      },
+      {
+        "type": "text",
+        "text": "Er <em>(heißen)</em> Paul.",
+        "comment": "Wir entfernen die Endung <em>en</em> und hängen in der 3. Person Singular <em>t</em> an.",
+        "children": [{ "correctAnswer": "heißt", "pos": 20 }]
+      },
+      {
+        "type": "text",
+        "text": "Paul <em>(sein)</em> vier Jahre alt.",
+        "comment": "<em>Sein</em> hat unregelmäßige Präsensformen.",
+        "children": [{ "correctAnswer": "ist", "pos": 20 }]
+      },
+      {
+        "type": "text",
+        "text": "Wir <em>(gehen)</em> in den Kindergarten.",
+        "comment": "Die 1. Person Plural hat dieselbe Form wie der Infinitiv.",
+        "children": [{ "correctAnswer": "gehen", "pos": 20 }]
+      },
+      {
+        "type": "text",
+        "text": "Am liebsten <em>(sein)</em> wir auf dem Spielplatz.",
+        "comment": "<em>Sein</em> hat unregelmäßige Präsensformen.",
+        "children": [{ "correctAnswer": "sind", "pos": 27 }]
+      },
+      {
+        "type": "text",
+        "text": "Es <em>(geben)</em> dort ein tolles Klettergerüst.",
+        "comment": "Wir entfernen die Endung <em>en</em> und hängen in der 3. Person Singular <em>t</em> an.|Das Verb <em>geben</em> ändert in der 2./3. Person Singular den Stammvokal. (e → i)",
+        "children": [{ "correctAnswer": "gibt", "pos": 19 }]
+      },
+      {
+        "type": "text",
+        "text": "Ich <em>(klettern)</em> sehr gerne.",
+        "comment": "Bei Verben, die nur auf n enden, entfernen wir das <em>n</em> und hängen in der 1. Person Singular <em>e</em> an.",
+        "children": [{ "correctAnswer": "klettere", "pos": 23 }]
+      }
+    ]
+  }
+]

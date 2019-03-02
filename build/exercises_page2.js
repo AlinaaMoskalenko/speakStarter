@@ -60,30 +60,97 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 342);
+/******/ 	return __webpack_require__(__webpack_require__.s = 365);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 342:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(343);
-
-
-/***/ }),
-
-/***/ 343:
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(344);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = sidebar;
+function sidebar() {
+    var sidebarToggle = document.querySelector('.sidebar__toggle');
+    var sidebar = document.querySelector('.sidebar');
+    var content = document.querySelector('.content-container');
+
+    sidebarToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('sidebar_opened');
+        content.classList.toggle('content-container_hidden');
+    });
+
+    document.addEventListener('click', closeSidebar);
+    document.addEventListener('touchstart', closeSidebar);
+
+    function closeSidebar() {
+        if (event.target.classList.contains('wrapper')) {
+            sidebar.classList.remove('sidebar_opened');
+            content.classList.remove('content-container_hidden');
+        }
+    }
+}
 
 /***/ }),
 
-/***/ 344:
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = notification;
+function notification(notificationBtn) {
+    var notification = notificationBtn.querySelector('.notification__container');
+    notificationBtn.addEventListener('click', function () {
+        notification.classList.toggle('notification__container_opened');
+    });
+}
+
+/***/ }),
+
+/***/ 365:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(366);
+
+
+/***/ }),
+
+/***/ 366:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(367);
+
+var _notification = __webpack_require__(15);
+
+var _notification2 = _interopRequireDefault(_notification);
+
+var _sidebar = __webpack_require__(14);
+
+var _sidebar2 = _interopRequireDefault(_sidebar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var notificationBtn = document.querySelector('.header__notification');
+(0, _notification2.default)(notificationBtn);
+
+(0, _sidebar2.default)();
+
+/***/ }),
+
+/***/ 367:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student page</title>
+<link href="student_page.css" rel="stylesheet"></head>
+
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="sidebar__toggle">
+                <div class="toggle__row"></div>
+                <div class="toggle__row"></div>
+                <div class="toggle__row"></div>
+            </div>
+            <div class="sidebar__content">
+                <div class="sidebar__logo"></div>
+                <ul class="sidebar__links">
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Home"></i>
+                            <span class="link__text">Главная</span>
+                        </a>
+                    </li>
+                    <li class="link link_active">
+                        <a href="#" class="link__path">
+                            <i class="icon-Homework"></i>
+                            <span class="link__text">Домашнее задание</span>
+                        </a>
+                        <div class="link__notification">3</div>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Media"></i>
+                            <span class="link__text">Медиа</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Exercises"></i>
+                            <span class="link__text">Упражнения</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Payments"></i>
+                            <span class="link__text">Оплата</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="link__path">
+                            <i class="icon-Options"></i>
+                            <span class="link__text">Настройки</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="content-container">
+            <header class="header">
+                <div class="header__user">
+                    <div class="user__photo">
+                        <img src="./assets/images/user_2.png" alt="User photo" class="photo">
+                    </div>
+                    <div class="user__name">Yegor Chulkov</div>
+                </div>
+                <div class="header__notification">
+                    <div class="header__notification-icon">
+                        <div class="notification__bell"></div>
+                        <div class="notification__indicator"></div>
+                    </div>
+                    <div class="notification__container">
+                        <div class="notification__caption">Уведомления</div>
+                        <div class="notification">
+                            <div class="notification__details">
+                                <div class="notification__message">
+                                    <div class="notification__state notification__state_new-homework"></div>
+                                    <div class="notification__text">Вам было задано д/з</div>
+                                </div>
+                                <div class="notification__subtitle">25 мин.</div>
+                            </div>
+                            <div class="notification__details">
+                                <div class="notification__message">
+                                    <div class="notification__state notification__state_no-homework"></div>
+                                    <div class="notification__text">Урок перешел в стадию "д/з не задали"</div>
+                                </div>
+                                <div class="notification__subtitle">5 мин.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main__container">
+                    <div class="main__content">
+                        <div class="prev-lesson__header-block">
+                            <h1>Предыдущие уроки</h1>
+                            <div class="prev-lesson__dropdown-filter">
+                                <div class="selected-item">
+                                    Выбрать...
+                                </div>
+                                <div class="items items_hidden">
+                                    <div>Выбрать...</div>
+                                    <div>требует подтверждения</div>
+                                    <div>д/з задали</div>
+                                    <div>д/з не задали</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prev-lesson__card">
+                            <div class="prev-lesson__info">
+                                <div class="prev-lesson__info-block">
+                                    <div class="prev-lesson__number">2</div>
+                                    <div class="prev-lesson__state prev-lesson__state_xs prev-lesson__state_waiting">
+                                        <span class="prev-lesson__state-text">требует подтверждения</span>
+                                        <div class="prev-lesson__state-diagram">
+                                            <div class="state-circle"></div>
+                                            <i class="icon-state__arrow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prev-lesson__details">
+                                    <h3>Спряжение глаголов в настоящем</h3>
+                                    <div class="prev-lesson__subtitle">25 июня, 15:36</div>
+                                </div>
+                            </div>
+                            <div class="prev-lesson__state prev-lesson__state_waiting">
+                                <span class="prev-lesson__state-text">требует подтверждения</span>
+                                <div class="prev-lesson__state-diagram">
+                                    <div class="state-circle"></div>
+                                    <i class="icon-state__arrow"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prev-lesson__card">
+                            <div class="prev-lesson__info">
+                                <div class="prev-lesson__info-block">
+                                    <div class="prev-lesson__number">2</div>
+                                    <div class="prev-lesson__state prev-lesson__state_xs prev-lesson__state_waiting">
+                                        <span class="prev-lesson__state-text">требует подтверждения</span>
+                                        <div class="prev-lesson__state-diagram">
+                                            <div class="state-circle"></div>
+                                            <i class="icon-state__arrow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prev-lesson__details">
+                                    <h3>Спряжение глаголов в настоящем</h3>
+                                    <div class="prev-lesson__subtitle">25 июня, 15:36</div>
+                                </div>
+                            </div>
+                            <div class="prev-lesson__state prev-lesson__state_waiting">
+                                <span class="prev-lesson__state-text">требует подтверждения</span>
+                                <div class="prev-lesson__state-diagram">
+                                    <div class="state-circle"></div>
+                                    <i class="icon-state__arrow"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prev-lesson__card">
+                            <div class="prev-lesson__info">
+                                <div class="prev-lesson__info-block">
+                                    <div class="prev-lesson__number">2</div>
+                                    <div class="prev-lesson__state prev-lesson__state_xs prev-lesson__state_setting">
+                                        <span class="prev-lesson__state-text">д/з не задали</span>
+                                        <div class="prev-lesson__state-diagram">
+                                            <div class="state-circle"></div>
+                                            <i class="icon-state__arrow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prev-lesson__details">
+                                    <h3>Спряжение глаголов в настоящем</h3>
+                                    <div class="prev-lesson__subtitle">25 июня, 15:36</div>
+                                </div>
+                            </div>
+                            <div class="prev-lesson__state prev-lesson__state_setting">
+                                <span class="prev-lesson__state-text">д/з не задали</span>
+                                <div class="prev-lesson__state-diagram">
+                                    <div class="state-circle"></div>
+                                    <i class="icon-state__arrow"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prev-lesson__card">
+                            <div class="prev-lesson__info">
+                                <div class="prev-lesson__info-block">
+                                    <div class="prev-lesson__number">2</div>
+                                    <div class="prev-lesson__state prev-lesson__state_xs prev-lesson__state_checking">
+                                        <span class="prev-lesson__state-text">д/з задали</span>
+                                        <div class="prev-lesson__state-diagram">
+                                            <div class="state-circle"></div>
+                                            <i class="icon-state__arrow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prev-lesson__details">
+                                    <h3>Спряжение глаголов в настоящем</h3>
+                                    <div class="prev-lesson__subtitle">25 июня, 15:36</div>
+                                </div>
+                            </div>
+                            <div class="prev-lesson__state prev-lesson__state_checking">
+                                <span class="prev-lesson__state-text">д/з задали</span>
+                                <div class="prev-lesson__state-diagram">
+                                    <div class="state-circle"></div>
+                                    <i class="icon-state__arrow"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__content">
+                        <div class="main__content-block">
+                            <h1>Предстоящий урок</h1>
+                            <div class="nxt-lesson__card">
+                                <div class="nxt-lesson__header-block">
+                                    <div class="nxt-lesson__photo">
+                                        <img src="./assets/images/user_1.png" alt="Teacher photo" class="teacher-photo">
+                                    </div>
+                                    <div class="nxt-lesson__teacher-info">
+                                        <span class="nxt-lesson__name">Наталья Сергеевна</span>
+                                        <a href="#" class="nxt-lesson__login">nata-1094</a>
+                                    </div>
+                                </div>
+                                <div class="nxt-lesson__main-block">
+                                    <div class="nxt-lesson__item nxt-lesson__item_opened">
+                                        <div>
+                                            <div class="toggle"></div>
+                                            <div class="nxt-lesson__time">11:25</div>
+                                            <div class="nxt-lesson__date">29 ноября (GMT+2)</div>
+
+                                        </div>
+                                        <div class="nxt-lesson__btn">
+                                            <button>Отменить</button>
+                                            <button>Перенести</button>
+                                        </div>
+                                    </div>
+                                    <div class="nxt-lesson__item nxt-lesson__item_opened">
+                                        <div>
+                                            <div class="toggle"></div>
+                                            <div class="nxt-lesson__time">12:30</div>
+                                            <div class="nxt-lesson__date">29 ноября (GMT+2)</div>
+                                            <!-- <a href="#" class="nxt-lesson__student-login">evpatly-20</a> -->
+                                        </div>
+                                        <div class="nxt-lesson__btn">
+                                            <button>Отменить</button>
+                                            <button>Перенести</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="nxt-lesson__btn-add-lesson">Назначить урок</button>
+                        </div>
+                        <div class="main__content-block">
+                            <h1>Баланс</h1>
+                            <div class="balance__card">
+                                <div class="balance__chart">
+                                    <svg class="chart__progress-bar" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 126 126"
+                                        style="enable-background:new 0 0 126 126;" xml:space="preserve">
+                                        <circle class="st0" cx="63" cy="63" r="60" />
+                                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-232.05" y1="480.9067"
+                                            x2="-231.05" y2="479.9067" gradientTransform="matrix(120 0 0 -120 27849 57711.8008)">
+                                            <stop offset="0.148" style="stop-color:#F2A568" />
+                                            <stop offset="0.4997" style="stop-color:#FBD27B" />
+                                            <stop offset="0.8296" style="stop-color:#98FB98" />
+                                        </linearGradient>
+                                        <circle class="st1" cx="63" cy="63" r="60" />
+                                    </svg>
+                                    <div class="chart__info">
+                                        <div>10</div>
+                                        <div>уроков</div>
+                                    </div>
+                                </div>
+                                <button class="balance__btn">Пополнить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__container">
+                    <h1>Баланс</h1>
+                    <div class="balance__card">
+                        <div class="balance__chart">
+                            <svg class="chart__progress-bar" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 126 126" style="enable-background:new 0 0 126 126;"
+                                xml:space="preserve">
+                                <circle class="st0" cx="63" cy="63" r="60" />
+                                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-232.05" y1="480.9067"
+                                    x2="-231.05" y2="479.9067" gradientTransform="matrix(120 0 0 -120 27849 57711.8008)">
+                                    <stop offset="0.148" style="stop-color:#F2A568" />
+                                    <stop offset="0.4997" style="stop-color:#FBD27B" />
+                                    <stop offset="0.8296" style="stop-color:#98FB98" />
+                                </linearGradient>
+                                <circle class="st1" cx="63" cy="63" r="60" />
+                            </svg>
+                            <div class="chart__info">
+                                <div>10</div>
+                                <div>уроков</div>
+                            </div>
+                        </div>
+                        <button class="balance__btn">Пополнить</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+<script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="student_page.js"></script></body>
+
+</html>

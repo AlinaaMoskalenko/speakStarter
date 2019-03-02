@@ -1,0 +1,1 @@
+import './building_app.scss';

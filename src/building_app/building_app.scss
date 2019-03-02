@@ -1,0 +1,103 @@
+@import "../common/styles.scss";
+
+$dotColors: #8cc759, #8c6daf, #ef5d74, #f9a74b, #60beeb, #fbef5a;
+$time: 0.5s;
+$container-width: 350px;
+$container-width-sm: 250px;
+$container-width-xs: 200px;
+$dot-size: 25px;
+
+.building-app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flex-column-align-center;
+  &__logo {
+    width: 200px;
+    height: 200px;
+    background: url("../../assets/img/logo/logo.png") center no-repeat;
+    background-size: contain;
+    @include sm {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  &__container {
+    margin-top: 30px;
+    width: $container-width;
+    position: relative;
+    @include sm {
+      width: $container-width-sm;
+    }
+    @include xs {
+      margin-top: 20px;
+      width: $container-width-xs;
+    }
+  }
+  &__dot {
+    height: $dot-size;
+    width: $dot-size;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: absolute;
+    animation: building-app-animation 3s infinite;
+
+    @for $i from 1 through length($dotColors) {
+      &:nth-child(#{$i}) {
+        background-color: nth($dotColors, $i);
+        animation-delay: $time;
+      }
+      $time: calc(#{$time} - 0.1s);
+    }
+  }
+}
+
+@keyframes building-app-animation {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX($container-width - $dot-size);
+  }
+  65% {
+    transform: translateX($container-width - $dot-size);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+
+@include sm {
+  @keyframes building-app-animation {
+    15% {
+      transform: translateX(0);
+    }
+    45% {
+      transform: translateX($container-width-sm - $dot-size);
+    }
+    65% {
+      transform: translateX($container-width-sm - $dot-size);
+    }
+    95% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@include xs {
+  @keyframes building-app-animation {
+    15% {
+      transform: translateX(0);
+    }
+    45% {
+      transform: translateX($container-width-xs - $dot-size);
+    }
+    65% {
+      transform: translateX($container-width-xs - $dot-size);
+    }
+    95% {
+      transform: translateX(0);
+    }
+  }
+}

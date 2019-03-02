@@ -11,5 +11,6 @@ export default function balance(balanceChart) {
         progressValue.style.strokeDashoffset = dashoffset;
     }
     progressValue.style.strokeDasharray = CIRCUMFERENCE;
-    progress(60);
+    
+    progress(60); //for example - 60%
 }

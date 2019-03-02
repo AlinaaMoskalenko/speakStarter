@@ -1,0 +1,15 @@
+$font-weight-primary: 500;
+$font-size-primary: 14px;
+$font-stack: 'MuseoSansCyrl500', Helvetica, sans-serif;
+
+$font: $font-weight-primary $font-size-primary $font-stack;
+
+$font-size-small: 0.857rem; // 12px = 0.86rem
+$font-size-regular: 1rem; // 14px + 15px = 1.07rem + inherit
+$font-size-larger: 1.142rem; // 16px = 1.14rem
+$font-size-large: 1.285rem; // 18px = 1.29rem
+$font-size-x-large: 1.571rem; // 22px = 1.57rem
+$font-size-xx-large: 1.785rem; // 25px = 1.79rem
+$font-size-xxx-large: 2rem; // 28px = 2rem
+
+$font-size-menu-nd-td-icons: 1.071rem;
