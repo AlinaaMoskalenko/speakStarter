@@ -4314,11 +4314,11 @@ h4 {
   border-radius: 5px;
   box-shadow: 0 1px 4px #0000003a;
   padding: 25px 30px; }
-  .main__exercises-block > div > h2 {
+  .main__exercises-block > h2 {
     padding-bottom: 10px;
     border-bottom: 1px solid #e8e8e8; }
     @media (max-width: 575.9px) {
-      .main__exercises-block > div > h2 {
+      .main__exercises-block > h2 {
         font-size: 1.21rem; } }
   .main__exercises-block ol {
     padding-left: 25px;

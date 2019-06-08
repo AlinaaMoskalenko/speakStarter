@@ -4327,9 +4327,7 @@ h4 {
   15% {
     transform: translateX(0); }
   45% {
-    transform: translateX(325px);
-    @media (max-width: 767.9px) {
-      transform: translateX(225px); } }
+    transform: translateX(325px); }
   65% {
     transform: translateX(325px); }
   95% {
